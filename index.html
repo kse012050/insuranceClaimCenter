@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=0"">
     <title>보험금 청구 센터</title>
     <link rel="stylesheet" href="css/import.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
 </head>
 <body>
     <div class="mainPage width01">
@@ -36,13 +38,48 @@
             </ul>
         </section>
         <nav>
-            <div class="width01">
+            <div class="mainManu width01">
                 <ul>
                     <li class="active"><a href="#">home</a></li>
                     <li><a href="#">list</a></li>
                     <li><a href="#">search</a></li>
-                    <li><a href="#">menu</a></li>
+                    <li data-event="menu"><a href="#">menu</a></li>
                 </ul>
+            </div>
+            <div class="sideMenu">
+                <div>
+                    <div>
+                        <h2><a href="#">HOME</a></h2>
+                        <button data-event="menuClose">close button</button>
+                    </div>
+                    <ul>
+                        <li class="active">
+                            <a href="#">지원 서비스 안내</a>
+                            <ul>
+                                <li><a href="#">test</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">보험금청구</a>
+                            <ul>
+                                <li><a href="#">필수 제출 서류 양식</a></li>
+                                <li><a href="#">보험금 청구</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">고객센터</a>
+                            <ul>
+                                <li><a href="#">test</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                            <ul>
+                                <li><a href="#">test</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </div>
