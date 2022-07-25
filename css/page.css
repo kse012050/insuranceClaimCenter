@@ -1,0 +1,34 @@
+
+body{padding-bottom: 51px;}
+
+.mainPage header{padding: 15px 0; text-align: right; margin-bottom: 25px;}
+.mainPage section{text-align: center; margin-bottom: 50px;}
+.mainPage section h2{font-size: 20px; font-weight: 500; margin-bottom: 30px;}
+.mainPage section h2 mark{display: block; font-size: 31px; margin-bottom: 5px;}
+.mainPage section p{max-width: 230px; margin: 0 auto; font-size: 15px; font-weight: 300; color: #666; margin-bottom: 30px; position: relative;}
+.mainPage section > div{text-align: left; height: 240px; background: #2e3239;  margin-bottom: 45px; position: relative;}
+.mainPage section div::before ,.mainPage section  div::after{content: ''; position: absolute;}
+.mainPage section > div::before{width: 120px; height: calc(100% - 5px); right: -15px; top: 30px; background-color: #0bbef3; transform-origin: right top; transform: skewX(-45deg);}
+.mainPage section > div::after{width: 168px; height: 168px; right: 0; bottom: 0; background: url('../images/car.png') no-repeat right bottom;}
+.mainPage section > div div{height: 100%; padding: 35px; box-sizing: border-box; overflow: hidden; position: relative;}
+.mainPage section > div div::before ,.mainPage section > div div::after{position: absolute;border-style: solid; border-color: white transparent;}
+.mainPage section > div div::before{border-width: 30px 30px 0; left: -30px; top: 0;}
+.mainPage section > div div::after{border-width: 0 30px 30px; right: -30px; bottom: 0;}
+.mainPage section > div div strong{display: block; font-size: 20px; font-weight: 700; color: white; margin-bottom: 10px;}
+.mainPage section ul{display: flex;}
+.mainPage section ul li{flex: 1;}
+.mainPage section ul li:nth-child(3n + 2){border-width: 0 1px; border-style: solid; border-color: #e6e6e6;}
+.mainPage section ul li a{display: block; padding: 60px 0 5px; background-repeat: no-repeat; background-position: center top 15px; font-size: 12px; font-weight: 300;}
+.mainPage section ul li:nth-child(1) a{background-image: url('../images/ic-cs.png');}
+.mainPage section ul li:nth-child(2) a{background-image: url('../images/ic-faq.png');}
+.mainPage section ul li:nth-child(3) a{background-image: url('../images/ic-info.png');}
+
+.mainPage nav{position: fixed; left: 0; bottom: 0; width: 100%; border-top: 1px solid rgba(0, 0, 0, 0.2); background-color: white;}
+.mainPage nav div ul{display: flex;}
+.mainPage nav div ul li{flex: 1;}
+.mainPage nav div ul li a{display: block; line-height: 55px; text-indent: -9999px; background-repeat: no-repeat; background-position: center; opacity: 0.5;}
+.mainPage nav div ul li:nth-child(1) a{background-image: url('../images/ic-home.png');}
+.mainPage nav div ul li:nth-child(2) a{background-image: url('../images/ic-list.png');}
+.mainPage nav div ul li:nth-child(3) a{background-image: url('../images/ic-search.png');}
+.mainPage nav div ul li:nth-child(4) a{background-image: url('../images/ic-menu.png');}
+.mainPage nav div ul li.active a{opacity: 1;}
