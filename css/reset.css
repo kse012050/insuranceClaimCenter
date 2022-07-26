@@ -21,7 +21,7 @@ time, mark, audio, video {
 	border: 0;
 	font: inherit;
 	font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-	line-height: normal;
+	line-height: 1.33;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */

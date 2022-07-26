@@ -1,12 +1,9 @@
-
-
-
 /* 메인 페이지 */
 .mainPage header{padding: 15px 0; text-align: right; margin-bottom: 25px;}
 .mainPage section{text-align: center; margin-bottom: 50px;}
 .mainPage section h2{font-size: 20px; font-weight: 500; margin-bottom: 30px;}
 .mainPage section h2 mark{display: block; font-size: 31px; margin-bottom: 5px;}
-.mainPage section p{max-width: 230px; margin: 0 auto; font-size: 15px; font-weight: 300; color: #666; margin-bottom: 30px; position: relative;}
+.mainPage section p{max-width: 230px; margin: 0 auto; font-size: 15px; font-weight: 300; line-height: normal; color: #666; margin-bottom: 30px; position: relative;}
 .mainPage section > div{text-align: left; height: 240px; background: #2e3239;  margin-bottom: 45px; position: relative;}
 .mainPage section div::before ,.mainPage section  div::after{content: ''; position: absolute;}
 .mainPage section > div::before{width: 120px; height: calc(100% - 5px); right: -15px; top: 30px; background-color: #0bbef3; transform-origin: right top; transform: skewX(-45deg);}
@@ -54,8 +51,28 @@
 
 
 /* 이용약관 */
-.termsArea > ol{font-size: 15px; line-height: 1.33; padding-bottom: 30px;}
+.termsArea > ol{font-size: 15px;  padding-bottom: 30px;}
 .termsArea > ol > li{counter-increment: termsArea01;}
 .termsArea > ol > li::before{content: '제' counter(termsArea01) '조(' attr(title) ')'; display: block;}
 .termsArea > ol > li ol li{counter-increment: termsArea02;}
 .termsArea > ol > li ol li::before{content: counter(termsArea02); display: inline-block; width: 13px; line-height: 13px; text-align: center; font-size: 10px; border: 1px solid black; border-radius: 100%;}
+
+
+/* 지원서비스 센터 */
+/* 지원서비스 센터 - 보상 한도 */
+.termsArea .compensationArea ul li{display: flex; align-items: center; height: 65px; font-size: 16px; border: 1px solid black;}
+.termsArea .compensationArea ul li:not(:last-child){margin-bottom: 10px;}
+.termsArea .compensationArea ul li::before{content: attr(title);  width: 90px; font-size: 18px; font-weight: 700; text-align: center;}
+
+/* 지원서비스 센터 - 자기부담금 지급 절차 */
+.termsArea .selfPay ol{margin-bottom: 20px;}
+.termsArea .selfPay ol li{align-items: center;}
+.termsArea .selfPay ol li:before{margin-right: 15px;}
+.termsArea .selfPay ol li:not(:last-child){margin-bottom: 15px;}
+.termsArea .selfPay ol li strong{display: flex; align-items: center;}
+.termsArea .selfPay ol li strong::before{content: ''; min-width: 90px; height: 90px; background-repeat: no-repeat; background-position: center; background-size: cover; border-radius: 100%; background-color: #f9f9f9; margin-right: 20px;}
+.termsArea .selfPay ol li:nth-child(1) strong::before{background-image: url('../images/ic-step-1.png');}
+.termsArea .selfPay ol li:nth-child(2) strong::before{background-image: url('../images/ic-step-2.png');}
+.termsArea .selfPay ol li:nth-child(3) strong::before{background-image: url('../images/ic-step-3.png');}
+.termsArea .selfPay ol li:nth-child(4) strong::before{background-image: url('../images/ic-step-4.png');}
+.termsArea .selfPay ol li:nth-child(5) strong::before{background-image: url('../images/ic-step-5.png');}

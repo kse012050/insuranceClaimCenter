@@ -1,27 +1,58 @@
 
 /* 컨텐츠 크기 */
-[class*='width'] , .subTitle div{max-width: 640px; margin: 0 auto;}
-.width01{width: calc(100% - 30px);}
-.width02{width: calc(100% - 40px);}
-.subTitle div{width: calc(100% - 20px);}
+[class*='width'] ,.subPage header > div{margin: 0 auto;}
+.width01{max-width: 640px;}
+.width02{max-width: calc(100% - 20px); width: calc(640px - 20px);}
+.width03{max-width: calc(100% - 30px); width: calc(640px - 30px);}
+.width04{max-width: calc(100% - 40px); width: calc(640px - 40px);}
+
+.termsArea{padding-bottom: 100px;}
 
 /* 메인 색상 */
 mark{color: #0bbef3;}
+mark.under{text-decoration: underline;}
+
+strong{font-weight: 700;}
 
 /* 숨겨진 타이틀 */
 .hiddenTitle{height: 0.1px; overflow: hidden;}
 
 /* 서브 타이틀 */
-.subTitle{position: fixed; left: 0; top: 0; width: 100%;}
-.subTitle div{ display: flex; flex-wrap: wrap; padding: 15px 0;}
-.subTitle div a{width: 24px; height: 24px; text-indent: -9999px; background: url('../images/ic-back.png') no-repeat center / cover; margin-bottom: 30px;}
-.subTitle div h2{width: 100%; font-size: 20px; font-weight: 700; padding: 0 10px;}
-.subTitle.active{background-color: #2e3239;}
-.subTitle.active div a{margin: 0; background-image: url('../images/ic-back-white.png');}
-.subTitle.active div h2{width: 50%; color: white;}
+.subPage header{position: fixed; left: 0; top: 0; width: 100%; background-color: lightgreen;}
+.subPage header > div .subTitle{ display: flex; flex-wrap: wrap; padding: 15px 0;}
+.subPage header > div .subTitle a{width: 24px; height: 24px; text-indent: -9999px; background: url('../images/ic-back.png') no-repeat center / cover; margin-bottom: 30px;}
+.subPage header > div .subTitle h2{width: 100%; font-size: 20px; font-weight: 700; padding: 0 10px;}
+.subPage header > div nav{width: 100%; overflow: auto;}
+.subPage header > div nav ul{display: flex;}
+.subPage header > div nav ul li a{white-space: nowrap;}
+.subPage header > div nav ul li:not(:last-child){margin-right: 20px;}
+.subPage header.active{background-color: #2e3239;}
+.subPage header.active > div .subTitle a{margin: 0; background-image: url('../images/ic-back-white.png');}
+.subPage header.active > div .subTitle h2{width: 50%; color: white;}
 
-/* body{padding-bottom: 51px;}
-.subPage{padding-top: 125px;} */
+/* 서브 페이지 타이틀 */
+.subPage h3{font-size: 20px; font-weight: 500; margin-bottom: 20px;}
+.subPage ~ strong{display: block; margin-bottom: 20px;}
+.subPage > div{font-size: 15px; font-weight: 400; }
+.subPage > div > :not(:last-child){margin-bottom: 50px;}
+
+/* 리스트 케이스 */
+ol li{counter-increment: olList01; display: flex;}
+ol li::before{content: counter(olList01); font-weight: 700;}
+.olCase01 li{padding-top: 15px;}
+.olCase01 li::before{margin-right: 20px;}
+.olCase01 li p{flex: 1; padding-bottom: 15px; border-bottom: 1px solid #e6e6e6;}
+
+.ulCase01 li{display: flex; }
+.ulCase01 li::before{content: '•'; margin-right: 5px;}
+
+/* 하단 링크 */
+.bottomLink{position: fixed; left: 0; bottom: 0; width: 100%; background-color: black;}
+.bottomLink div{display: flex; justify-content: center;}
+.bottomLink div *{line-height: 55px; font-size: 16px; font-weight: 700;}
+.bottomLink div *:only-child{width: 100%; text-align: center;}
+.bottomLink div *:last-child{color: #0bbef3;}
+.bottomLink div *:not(:only-child):first-child{color: white;}
 
 /* 푸터 */
 footer{padding: 40px 0; font-size: 13px; background-color: #f3f3f3;}
@@ -30,7 +61,7 @@ footer div ul{display: flex; justify-content: center; margin-bottom: 20px;}
 footer div ul li:not(:last-child){border-right: 1px solid black;}
 footer div ul li a{display: block; padding: 0 10px;  font-weight: 300;}
 footer div ul li a b{font-weight: 500;}
-footer div p:nth-of-type(1){max-width: 220px; margin: 0 auto 10px; }
+footer div p:nth-of-type(1){max-width: 220px; margin: 0 auto 10px; line-height: normal;}
 footer div p:nth-of-type(1) b{font-weight: 700;}
 footer div > a{font-size: 18px; font-weight: 500; margin-bottom: 20px;}
 footer div p:nth-of-type(2){font-size: 12px; font-weight: 300; color: #666;}

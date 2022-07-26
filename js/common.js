@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    $('*').hasClass('sideMenu') && $('body').css('padding-bottom' , '51px');
-    $('*').hasClass('subPage') && $('.subPage').css('padding-top' , '125px');
+    $('*').hasClass('sideMenu') && $('body').css('padding-bottom' , '50px');
+    $('*').hasClass('subPage') && $('.subPage').css('padding-top' , $('.subPage header').height() + 50);
 
     // 메인 메뉴 클릭
     $('[data-event="menu"]').click(function(){
@@ -20,9 +20,9 @@ $(document).ready(function(){
     // 스크롤 , 터치 이벤트
     $(window).scroll(function(e){
         if($(window).scrollTop() > 0){
-            $('.subTitle').addClass('active');
+            $('.subPage header').addClass('active');
         }else{
-            $('.subTitle').removeClass('active')
+            $('.subPage header').removeClass('active')
         }
     })
 
