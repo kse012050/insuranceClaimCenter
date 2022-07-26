@@ -54,8 +54,8 @@
 
 
 /* 이용약관 */
-.termsOfService > ol{font-size: 15px; line-height: 1.33; padding-bottom: 30px;}
-.termsOfService > ol > li{counter-increment: termsOfService01;}
-.termsOfService > ol > li::before{content: '제' counter(termsOfService01) '조(' attr(title) ')'; display: block;}
-.termsOfService > ol > li ol li{counter-increment: termsOfService02;}
-.termsOfService > ol > li ol li::before{content: counter(termsOfService02); display: inline-block; width: 13px; line-height: 13px; text-align: center; font-size: 10px; border: 1px solid black; border-radius: 100%;}
+.termsArea > ol{font-size: 15px; line-height: 1.33; padding-bottom: 30px;}
+.termsArea > ol > li{counter-increment: termsArea01;}
+.termsArea > ol > li::before{content: '제' counter(termsArea01) '조(' attr(title) ')'; display: block;}
+.termsArea > ol > li ol li{counter-increment: termsArea02;}
+.termsArea > ol > li ol li::before{content: counter(termsArea02); display: inline-block; width: 13px; line-height: 13px; text-align: center; font-size: 10px; border: 1px solid black; border-radius: 100%;}
