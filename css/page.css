@@ -1,6 +1,7 @@
 
-body{padding-bottom: 51px;}
 
+
+/* 메인 페이지 */
 .mainPage header{padding: 15px 0; text-align: right; margin-bottom: 25px;}
 .mainPage section{text-align: center; margin-bottom: 50px;}
 .mainPage section h2{font-size: 20px; font-weight: 500; margin-bottom: 30px;}
@@ -23,16 +24,16 @@ body{padding-bottom: 51px;}
 .mainPage section ul li:nth-child(2) a{background-image: url('../images/ic-faq.png');}
 .mainPage section ul li:nth-child(3) a{background-image: url('../images/ic-info.png');}
 
+/* 메인 메뉴 */
 .mainPage nav{ position: fixed; left: 0; bottom: 0; width: 100%; border-top: 1px solid rgba(0, 0, 0, 0.2); background-color: white;}
 .mainPage nav .mainManu ul{display: flex;}
 .mainPage nav .mainManu ul li{flex: 1;}
-.mainPage nav .mainManu ul li a{display: block; line-height: 55px; text-indent: -9999px; background-repeat: no-repeat; background-position: center; opacity: 0.5;}
-.mainPage nav .mainManu ul li:nth-child(1) a{background-image: url('../images/ic-home.png');}
-.mainPage nav .mainManu ul li:nth-child(2) a{background-image: url('../images/ic-list.png');}
-.mainPage nav .mainManu ul li:nth-child(3) a{background-image: url('../images/ic-search.png');}
-.mainPage nav .mainManu ul li:nth-child(4) a{background-image: url('../images/ic-menu.png');}
+.mainPage nav .mainManu ul li :is(a , button){display: block; width: 100%; line-height: 55px; text-indent: -9999px; background-repeat: no-repeat; background-position: center; opacity: 0.5;}
+.mainPage nav .mainManu ul li:nth-child(1) :is(a , button){background-image: url('../images/ic-home.png');}
+.mainPage nav .mainManu ul li:nth-child(2) :is(a , button){background-image: url('../images/ic-list.png');}
+.mainPage nav .mainManu ul li:nth-child(3) :is(a , button){background-image: url('../images/ic-search.png');}
+.mainPage nav .mainManu ul li:nth-child(4) :is(a , button){background-image: url('../images/ic-menu.png');}
 .mainPage nav .mainManu ul li.active a{opacity: 1;}
-
 .mainPage nav .sideMenu{display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);}
 .mainPage nav .sideMenu > div{width: 290px; margin-left: auto; height: 100%; background-color: white;}
 .mainPage nav .sideMenu > div div{display: flex; justify-content: space-between; align-items: center; padding: 15px;}
@@ -50,3 +51,11 @@ body{padding-bottom: 51px;}
 .mainPage nav .sideMenu > div > ul > li ul li a{padding: 10px; font-size: 15px; font-weight: 300; color: #666;}
 /* .mainPage nav .sideMenu > div > ul > li.active ul{padding-bottom: 20px;} */
 .mainPage nav .sideMenu.active{display: block;}
+
+
+/* 이용약관 */
+.termsOfService > ol{font-size: 15px; line-height: 1.33; padding-bottom: 30px;}
+.termsOfService > ol > li{counter-increment: termsOfService01;}
+.termsOfService > ol > li::before{content: '제' counter(termsOfService01) '조(' attr(title) ')'; display: block;}
+.termsOfService > ol > li ol li{counter-increment: termsOfService02;}
+.termsOfService > ol > li ol li::before{content: counter(termsOfService02); display: inline-block; width: 13px; line-height: 13px; text-align: center; font-size: 10px; border: 1px solid black; border-radius: 100%;}

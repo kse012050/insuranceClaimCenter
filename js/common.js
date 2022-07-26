@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    $('*').hasClass('sideMenu') && $('body').css('padding-bottom' , '51px');
+    $('*').hasClass('subPage') && $('.subPage').css('padding-top' , '125px');
+
+    // 메인 메뉴 클릭
     $('[data-event="menu"]').click(function(){
         $('.sideMenu').addClass('active');
     })
@@ -12,4 +16,15 @@ $(document).ready(function(){
             $(this).next().stop().slideDown();
         }
     })
+
+    // 스크롤 , 터치 이벤트
+    $(window).scroll(function(e){
+        if($(window).scrollTop() > 0){
+            $('.subTitle').addClass('active');
+        }else{
+            $('.subTitle').removeClass('active')
+        }
+    })
+
+    console.log($('nav').hasClass('subPage'));
 })

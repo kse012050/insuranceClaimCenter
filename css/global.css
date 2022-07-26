@@ -1,9 +1,27 @@
 
 /* 컨텐츠 크기 */
-.width01{max-width: 640px; width: calc(100% - 30px); margin: 0 auto;}
+[class*='width'] , .subTitle div{max-width: 640px; margin: 0 auto;}
+.width01{width: calc(100% - 30px);}
+.width02{width: calc(100% - 40px);}
+.subTitle div{width: calc(100% - 20px);}
 
 /* 메인 색상 */
 mark{color: #0bbef3;}
+
+/* 숨겨진 타이틀 */
+.hiddenTitle{height: 0.1px; overflow: hidden;}
+
+/* 서브 타이틀 */
+.subTitle{position: fixed; left: 0; top: 0; width: 100%;}
+.subTitle div{ display: flex; flex-wrap: wrap; padding: 15px 0;}
+.subTitle div a{width: 24px; height: 24px; text-indent: -9999px; background: url('../images/ic-back.png') no-repeat center / cover; margin-bottom: 30px;}
+.subTitle div h2{width: 100%; font-size: 20px; font-weight: 700; padding: 0 10px;}
+.subTitle.active{background-color: #2e3239;}
+.subTitle.active div a{margin: 0; background-image: url('../images/ic-back-white.png');}
+.subTitle.active div h2{width: 50%; color: white;}
+
+/* body{padding-bottom: 51px;}
+.subPage{padding-top: 125px;} */
 
 /* 푸터 */
 footer{padding: 40px 0; font-size: 13px; background-color: #f3f3f3;}
