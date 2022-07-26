@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Iphone 모바일 확대 방지 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=0">
+    <title>STEP01 보험금 청구 - 보험 중계 청구센터</title>
+    <link rel="stylesheet" href="css/import.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <div class="subPage step01Area">
+        <header class="bgColor">
+            <div>
+                <h1 class="hiddenTitle">보험 중계 청구 센터</h1>
+                <div class="subTitle width02">
+                    <a>이전 페이지</a>
+                    <h2>STEP01</h2>
+                    <p>
+                        보험금 청구를 위한<br/>
+                        <strong>개인(신용) 정보에 동의</strong>해 주세요.
+                    </p>
+                </div>
+            </div>
+        </header>
+        <div class="width04">
+            <section>
+                <h3>소비자 권익 보호에 관한 사항</h3>
+                <div>
+                    <strong>최소한의 정보 처리 및 동의거부에 관한 안내</strong>
+                    <p>정보동의시 보험금 지급심사 및 보험사고조사 등을 위해 최소한의 정보만 수집·이용 및 제공하며, 동의를 하시지 않을 경우에는 보험금 지급 업무와 관련한 정상적인 서비스 제공이 불가능할 수 있음을 알려드립니다.</p>
+                    <strong>신용등급에 미치는 영향</strong>
+                    <p>본 동의서에 의한 개인(신용)정보 조회는 귀하의 신용등급에 영향을 주지 않습니다.</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>
+                    개인(신용)정보<br/>
+                    수집∙조회∙이용∙제공 동의
+                </h3>
+                <div>
+                    <p>보험금 청구 진행을 위해 개인(신용)정보 수집·조회·이용·제공에 대한 동의가 필요합니다.</p>
+                    <p>귀하는 개인(신용)정보 수집∙조회∙이용∙제공에 대한 동의를 거부하실 수 있으며, 개인의 신용도등을 평가하기 위한 목적 이외의 개인(신용)정보 제공 동의는 철회할 수 있습니다. 다만, 본 동의는 ‘보험금 청구＇를 위해 필수적인 사항이므로 동의를 거부하시는 경우 관련 업무 수행이 불가능할 수 있습니다.</p>
+                </div>
+            </section>
+            
+            <section class="agreeArea">
+                <h3>보험금 청구를 위한 상세 동의</h3>
+                <form>
+                    <div class="fullAgree">
+                        <input type="checkbox" id="fullAgree" title="전체동의">
+                        <label for="fullAgree">전체동의</label>
+                        <button class="moreBtn">상세보기</button>
+                    </div>
+                    <div class="popupArea">
+                        <strong>보험금 청구를 위한 상세 동의</strong>
+                        <ol>
+                            <li><button>수집 이용에 관한 사항</button></li>
+                            <li><button>제공에 관한 사항</button></li>
+                            <li><button>조회에 관한 사항</button></li>
+                        </ol>
+                        <button></button>
+                    </div>
+                    <fieldset>
+                        <strong>수집・이용에 관한 사항</strong>
+                        <ul>
+                            <li><input type="checkbox"><label for=""><span>고유식별정보</span> 동의</span></label></li>
+                            <li><input type="checkbox"><label for=""><span>민감정보</span> 동의</label></li>
+                            <li><input type="checkbox"><label for=""><span>개인(신용)정보</span> 동의</label></li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <strong>제공에 관한 사항</strong>
+                        <ul>
+                            <li><input type="checkbox"><label for=""><span>고유식별정보</span>동의</label></li>
+                            <li><input type="checkbox"><label for=""><span>민감정보</span> 동의</label></li>
+                            <li><input type="checkbox"><label for=""><span>개인(신용)정보</span> 동의</label></li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <strong>조회에 관한 사항</strong>
+                        <ul>
+                            <li><input type="checkbox"><label for=""><span>고유식별정보</span> 동의</label></li>
+                            <li><input type="checkbox"><label for=""><span>민감정보</span> 동의</label></li>
+                            <li><input type="checkbox"><label for=""><span>개인(신용)정보</span> 동의</label></li>
+                        </ul>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+        <div class="bottomLink">
+            <div class="width04">
+                <a href="#">이전</a>
+                <a href="#">다음</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

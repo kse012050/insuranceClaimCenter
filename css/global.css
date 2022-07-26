@@ -31,7 +31,9 @@ strong{font-weight: 700;}
 .subPage header > div .subTitle{ display: flex; flex-wrap: wrap; padding: 15px 0;}
 .subPage header > div .subTitle a{width: 24px; height: 24px; text-indent: -9999px; background-repeat: no-repeat ; background-position: center; background-size: cover; margin-bottom: 30px;}
 .subPage header > div .subTitle h2{width: 100%; font-size: 20px; font-weight: 700; padding: 0 10px;}
-.subPage header > div .subTitle p{padding: 0 10px; margin-top: 10px;}
+.subPage header > div .subTitle p{padding: 0 10px;}
+.subPage header.bgColor > div .subTitle p{margin-top: 40px;}
+.subPage header:not(.bgColor) > div .subTitle p{ margin-top: 10px;}
 .subPage header > div nav{width: 100%; overflow: auto; padding-bottom: 10px;}
 .subPage header > div nav ul{display: inline-flex; margin: 0 20px;}
 .subPage header > div nav ul li.active{position: relative;}
@@ -55,6 +57,11 @@ strong{font-weight: 700;}
 .subPage header.bgColor + *{margin-top: 50px;}
 .subPage header:not(.bgColor) + *{margin-top: 30px;}
 
+/* more 버튼*/
+.moreBtn{display: flex; align-items: center; line-height: 1;}
+.moreBtn::after{content: ''; background-repeat: no-repeat; background-position: center; background-size: cover;}
+a.moreBtn::after{width: 15px; height: 15px; background-image: url('../images/ic-more-color.png'); margin-left: 2px;}
+button.moreBtn::after{width: 20px; height: 20px; background-image: url('../images/ic-more.png'); margin-left: 5px;}
 
 
 /* 리스트 케이스 */
@@ -80,12 +87,13 @@ strong{font-weight: 700;}
 
 
 /* 하단 링크 */
-.bottomLink{position: fixed; left: 0; bottom: 0; width: 100%; background-color: black;}
-.bottomLink div{display: flex; justify-content: center;}
-.bottomLink div *{line-height: 55px; font-size: 16px; font-weight: 700;}
-.bottomLink div *:only-child{width: 100%; text-align: center;}
-.bottomLink div *:last-child{color: #0bbef3;}
-.bottomLink div *:not(:only-child):first-child{color: white;}
+.bottomLink-fix{position: fixed; left: 0; bottom: 0; width: 100%;}
+[class|='bottomLink']{ background-color: black;}
+[class|='bottomLink'] div{display: flex; justify-content: space-between;}
+[class|='bottomLink'] div *{line-height: 55px; font-size: 16px; font-weight: 700;}
+[class|='bottomLink'] div *:only-child{width: 100%; text-align: center;}
+[class|='bottomLink'] div *:last-child{color: #0bbef3;}
+[class|='bottomLink'] div *:not(:only-child):first-child{color: white;}
 
 /* 푸터 */
 footer{padding: 40px 0; font-size: 13px; background-color: #f3f3f3;}
