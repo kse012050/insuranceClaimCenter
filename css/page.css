@@ -84,3 +84,10 @@
 .claimArea ul li a{display: block; padding: 25px; box-sizing: border-box; background-repeat: no-repeat; background-position: right 15px bottom 10px;}
 .claimArea ul li:nth-child(1) a{height: 160px; background-color:#2e3239; background-image: url('../images/ic-step-6.png');}
 .claimArea ul li:nth-child(2) a{height: 110px; background-color: #0bbef3; background-image: url('../images/ic-step-4.png');}
+
+/* 보험금 청구 - 필수 제출 서류*/
+.documentArea > div > ol{margin-bottom: 20px;}
+.documentArea > div > p{color: #ff2f2f;}
+.documentArea > div > p::before{content: '*';}
+.documentArea .knowArea{background-color: #f5f5f5; padding: 30px 0;}
+.documentArea .knowArea div strong{display: block; padding-top: 50px; max-width: 140px; background: url('../images/ic-notice.png') no-repeat left top; margin-bottom: 30px;}
