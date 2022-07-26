@@ -54,16 +54,27 @@
                     <div class="fullAgree">
                         <input type="checkbox" id="fullAgree" title="전체동의">
                         <label for="fullAgree">전체동의</label>
-                        <button class="moreBtn">상세보기</button>
+                        <button class="moreBtn" data-event="popup01">상세보기</button>
                     </div>
-                    <div class="popupArea">
-                        <strong>보험금 청구를 위한 상세 동의</strong>
-                        <ol>
-                            <li><button>수집 이용에 관한 사항</button></li>
-                            <li><button>제공에 관한 사항</button></li>
-                            <li><button>조회에 관한 사항</button></li>
-                        </ol>
-                        <button></button>
+                    <div class="popupArea" data-event="popup01Open">
+                        <div class="width01">
+                            <strong>보험금 청구를 위한 상세 동의</strong>
+                            <ol class="olCase02">
+                                <li>
+                                    <button data-event="drop">수집 이용에 관한 사항</button>
+                                    <p>본 약관은 티피에이코리아 (이하“회사”라칭함)에서 운영하는모바일청구Web과 App(이하 "홈페이지"라칭함)의서비스이용및제공에관한 제반사항의규정을목적으로합니다. </p>
+                                </li>
+                                <li>
+                                    <button data-event="drop">제공에 관한 사항</button>
+                                    <p>본 약관은 티피에이코리아 (이하“회사”라칭함)에서 운영하는모바일청구Web과 App(이하 "홈페이지"라칭함)의서비스이용및제공에관한 제반사항의규정을목적으로합니다. </p>
+                                </li>
+                                <li>
+                                    <button data-event="drop">조회에 관한 사항</button>
+                                    <p>본 약관은 티피에이코리아 (이하“회사”라칭함)에서 운영하는모바일청구Web과 App(이하 "홈페이지"라칭함)의서비스이용및제공에관한 제반사항의규정을목적으로합니다. </p>
+                                </li>
+                            </ol>
+                        </div>
+                        <button class="closeBtn" data-event="popup01Close">popup close button</button>
                     </div>
                     <fieldset>
                         <strong>수집・이용에 관한 사항</strong>

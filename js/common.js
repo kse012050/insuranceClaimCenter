@@ -18,7 +18,6 @@ $(document).ready(function(){
     })
 
     // 스크롤 , 터치 이벤트
-
     if($('.subPage').attr('data-event') === 'scroll'){
         $(window).scroll(function(e){
             if($(window).scrollTop() > 0){
@@ -29,5 +28,26 @@ $(document).ready(function(){
         })
     }
 
-    console.log($('nav').hasClass('subPage'));
+    // 팝업 열고 닫기
+    $('[data-event*="popup"]').click(function(e){
+        e.preventDefault();
+        let attrName = $(this).attr('data-event');
+        $('[data-event="'+attrName+'Open"]').addClass('active');
+        console.log(2);
+        $('[data-event="'+attrName+'Close"]').click(function(e){
+            e.preventDefault();
+            $('[data-event="'+attrName+'Open"]').removeClass('active');
+        })
+    })
+
+    // 드랍박스
+    $('[data-event="drop"]').click(function(e){
+        e.preventDefault();
+        $('[data-event="drop"]').removeClass('active');
+        $(this).addClass('active');
+        $('[data-event="drop"] + *').stop().slideUp();
+        $(this).next().stop().slideDown();
+    })
+
+    
 })
