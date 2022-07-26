@@ -51,7 +51,7 @@
 
 
 /* 이용약관 */
-.termsArea > ol{font-size: 15px;  padding-bottom: 30px;}
+.termsArea > ol{font-size: 15px;}
 .termsArea > ol > li{counter-increment: termsArea01;}
 .termsArea > ol > li::before{content: '제' counter(termsArea01) '조(' attr(title) ')'; display: block;}
 .termsArea > ol > li ol li{counter-increment: termsArea02;}
@@ -79,7 +79,6 @@
 
 
 /* 보험금 청구 */
-.claimArea{padding-bottom: 30px;}
 .claimArea ul li{font-size: 16px; color: white;}
 .claimArea ul li:not(:last-child){margin-bottom: 10px;}
 .claimArea ul li a{display: block; padding: 25px; box-sizing: border-box; background-repeat: no-repeat; background-position: right 15px bottom 10px;}

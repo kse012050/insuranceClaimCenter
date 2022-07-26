@@ -6,6 +6,8 @@
 .width03{max-width: calc(100% - 30px); width: calc(640px - 30px);}
 .width04{max-width: calc(100% - 40px); width: calc(640px - 40px);}
 
+.termsArea , 
+.claimArea{padding-bottom: 50px;}
 .termsArea{padding-bottom: 100px;}
 
 /* 메인 색상 */
@@ -16,6 +18,8 @@ strong{font-weight: 700;}
 
 /* 숨겨진 타이틀 */
 .hiddenTitle{height: 0.1px; overflow: hidden;}
+
+/* 서브페이지 */
 
 /* 서브 타이틀 */
 .subPage header + *{margin-top: 50px;}
