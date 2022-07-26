@@ -76,3 +76,12 @@
 .termsArea .selfPay ol li:nth-child(3) strong::before{background-image: url('../images/ic-step-3.png');}
 .termsArea .selfPay ol li:nth-child(4) strong::before{background-image: url('../images/ic-step-4.png');}
 .termsArea .selfPay ol li:nth-child(5) strong::before{background-image: url('../images/ic-step-5.png');}
+
+
+/* 보험금 청구 */
+.claimArea{padding-bottom: 30px;}
+.claimArea ul li{font-size: 16px; color: white;}
+.claimArea ul li:not(:last-child){margin-bottom: 10px;}
+.claimArea ul li a{display: block; padding: 25px; box-sizing: border-box; background-repeat: no-repeat; background-position: right 15px bottom 10px;}
+.claimArea ul li:nth-child(1) a{height: 160px; background-color:#2e3239; background-image: url('../images/ic-step-6.png');}
+.claimArea ul li:nth-child(2) a{height: 110px; background-color: #0bbef3; background-image: url('../images/ic-step-4.png');}

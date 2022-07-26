@@ -23,6 +23,7 @@ strong{font-weight: 700;}
 .subPage header > div .subTitle a{width: 24px; height: 24px; text-indent: -9999px; background-repeat: no-repeat ; background-position: center; background-size: cover; margin-bottom: 30px;}
 .subPage header:not([class*=""]) > div .subTitle a{background-image: url('../images/ic-back.png');}
 .subPage header > div .subTitle h2{width: 100%; font-size: 20px; font-weight: 700; padding: 0 10px;}
+.subPage header > div .subTitle p{padding: 0 10px;}
 .subPage header > div nav{width: 100%; overflow: auto; padding-bottom: 10px;}
 .subPage header > div nav ul{display: inline-flex; margin: 0 20px;}
 .subPage header > div nav ul li.active{position: relative;}
