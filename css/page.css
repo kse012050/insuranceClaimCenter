@@ -172,12 +172,20 @@
 
 
 /* 고객센터 */
-.serviceCenter div ul{}
-.serviceCenter div ul li{padding: 30px 20px 25px; border-bottom: 1px solid #e6e6e6; position: relative;}
-.serviceCenter div ul li a{font-weight: 300;}
-.serviceCenter div ul li a b{display: block; font-weight: 500; margin-bottom: 10px;}
-.serviceCenter div ul li::after{content: ''; width: 55px; height: 55px; border: 1px solid black; border-radius: 100%; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background-repeat: no-repeat; background-position: center; background-size: 26px;}
-.serviceCenter div ul li:nth-child(1)::after{background-image: url('../images/ic-cs.png');}
-.serviceCenter div ul li:nth-child(2)::after{background-image: url('../images/ic-kakao.png');}
-.serviceCenter div ul li:nth-child(3)::after{background-image: url('../images/ic-fax.png');}
-.serviceCenter div ul li:nth-child(4)::after{background-image: url('../images/ic-email.png');}
+.serviceCenter > div ul{}
+.serviceCenter > div ul li{padding: 30px 20px 25px; border-bottom: 1px solid #e6e6e6; position: relative;}
+.serviceCenter > div ul li a{font-weight: 300;}
+.serviceCenter > div ul li a b{display: block; font-weight: 500; margin-bottom: 10px;}
+.serviceCenter > div ul li::after{content: ''; width: 55px; height: 55px; border: 1px solid black; border-radius: 100%; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background-repeat: no-repeat; background-position: center; background-size: 26px;}
+.serviceCenter > div ul li:nth-child(1)::after{background-image: url('../images/ic-cs.png');}
+.serviceCenter > div ul li:nth-child(2)::after{background-image: url('../images/ic-kakao.png');}
+.serviceCenter > div ul li:nth-child(3)::after{background-image: url('../images/ic-fax.png');}
+.serviceCenter > div ul li:nth-child(4)::after{background-image: url('../images/ic-email.png');}
+
+
+/* FAQ */
+.FAQArea nav{margin-top: 15px;}
+.FAQArea > div ul li button{width: 100%; padding: 25px 20px; font-size: 16px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e6e6e6;}
+.FAQArea > div ul li button::after{content: ''; width: 24px; height: 24px; background: url('../images/ic-up.png') no-repeat center / cover; margin-left: auto; transition: 0.5s;}
+.FAQArea > div ul li button.active::after{transform: rotate(180deg);}
+.FAQArea > div ul li div{padding: 20px; background-color: #f9f9f9; border-bottom: 1px solid #e6e6e6;}
