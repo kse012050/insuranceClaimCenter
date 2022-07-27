@@ -25,7 +25,8 @@ strong{font-weight: 700;}
 .subPage h3{font-size: 20px; font-weight: 500; margin-bottom: 20px;}
 .subPage ~ strong{display: block; margin-bottom: 20px;}
 .subPage header ~ *:not(:last-child){margin-bottom: 50px;}
-.subPage header ~ div > *:not(:last-child):not(:last-of-type){margin-bottom: 50px;}
+.subPage header ~ div > *:not(:last-child){margin-bottom: 50px;}
+/* .subPage header ~ div > *:not(:last-child):not(:last-of-type){margin-bottom: 50px;} */
 
 /* 서브 타이틀 */
 .subPage header > div .subTitle{ display: flex; flex-wrap: wrap; padding: 15px 0;}
@@ -76,6 +77,8 @@ button.moreBtn::after{width: 20px; height: 20px; background-image: url('../image
 .olCase02 li button::before{content:'0' counter(olList01); margin-right: 5px;}
 .olCase02 li button::after{content: ''; width: 24px; height: 24px; background: url('../images/ic-up.png') no-repeat center / cover; margin-left: auto; transition: 0.5s;}
 .olCase02 li button.active::after{transform: rotate(180deg);}
+/* ol - 03 */
+.olCase03 li::before{content: counter(olList01) '. ' attr(title); font-weight: 700;}
 
 
 /* ul */
@@ -86,8 +89,9 @@ button.moreBtn::after{width: 20px; height: 20px; background-image: url('../image
 /* ul - 02*/
 .ulCase02 > li:not(:last-child){margin-bottom: 10px;}
 .ulCase02 > li > *{display: flex;}
-.ulCase02 > li > *::before{content: ''; min-width: 12px; height: 20px; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.ulCase02 > li > *::before{content: ''; min-width: 12px; height: 20px; background-repeat: no-repeat; background-position: center; background-size: cover; margin-right: 10px;}
 .ulCase02 > li > p::before{background-image: url('../images/ic-check.png');}
+.ulCase02 > li > mark::before{background-image: url('../images/ic-check-color.png');}
 
 
 /* popup
@@ -102,6 +106,9 @@ button.closeBtn::after{transform:translate(-50% , -50%) rotate(-45deg);}
 /* * 표시 */
 .starGuide::before{content: '*';}
 
+/* 입력 박스 공통 */
+input:not([type="checkbox"]) , select{ height: 50px;}
+input:not([type="checkbox"]) , select , textarea{width: 100%; padding: 15px; border: 1px solid #e6e6e6; box-sizing: border-box;}
 /* 체크박스 */
 input[type="checkBox"]{display: none;}
 input[type="checkBox"] + label{line-height: 1; display: flex; align-items: center;}

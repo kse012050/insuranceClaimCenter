@@ -86,9 +86,8 @@
 .claimArea ul li:nth-child(2) a{height: 110px; background-color: #0bbef3; background-image: url('../images/ic-step-4.png');}
 
 /* 보험금 청구 - 필수 제출 서류*/
-.documentArea > div > ol{margin-bottom: 20px;}
-.documentArea > div > p{color: #ff2f2f;}
-/* .documentArea > div > p::before{content: '*';} */
+.documentArea > div > div > ol{margin-bottom: 20px;}
+.documentArea > div > div > p{color: #ff2f2f;}
 .documentArea .knowArea{background-color: #f5f5f5; padding: 30px 0;}
 .documentArea .knowArea div strong{display: block; padding-top: 50px; max-width: 140px; background: url('../images/ic-notice.png') no-repeat left top; margin-bottom: 30px;}
 
@@ -122,8 +121,8 @@
 .step02Area .olCase02 li fieldset ul li{position: relative;}
 .step02Area .olCase02 li fieldset ul li:not(:last-child){margin-bottom: 30px;}
 /* 입력 박스 공통 */
-.step02Area .olCase02 li fieldset ul li :is(input , select){ height: 50px;}
-.step02Area .olCase02 li fieldset ul li :is(input , select , textarea){width: 100%; padding: 15px; border: 1px solid #e6e6e6; box-sizing: border-box;}
+/* .step02Area .olCase02 li fieldset ul li :is(input , select){ height: 50px;} */
+/* .step02Area .olCase02 li fieldset ul li :is(input , select , textarea){width: 100%; padding: 15px; border: 1px solid #e6e6e6; box-sizing: border-box;} */
 /* 입력 박스 부연설명 data-furtherExplanation*/
 .step02Area .olCase02 li fieldset ul li [data-FE]{position: relative;}
 .step02Area .olCase02 li fieldset ul li [data-FE]::before{ content: attr(data-FE); position: absolute; right: 15px; top: 0; height: 100%; display: flex; align-items: center;}
@@ -138,3 +137,18 @@
 
 .step02Area .olCase02 li fieldset ul li > label:first-child{display: block; margin-bottom: 10px;}
 .step02Area .olCase02 li fieldset ul li textarea{height: 130px; resize: none;}
+
+/* 보험금 청구 - STEP03 */
+.step03Area section h3{padding-bottom: 10px; border-bottom: 1px solid black;}
+.step03Area section .ulCase01 li{padding: 15px 0; border-bottom: 1px solid #e6e6e6;}
+.step03Area section ol li{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;}
+.step03Area section ol li:not(:last-child){margin-bottom: 30px;}
+.step03Area section ol li::before{width: 100%; margin-bottom: 10px;}
+.step03Area section ol li div{flex: 1; position: relative;}
+.step03Area section ol li div input[type="file"]{display: none;}
+.step03Area section ol li :is(label , button){ text-indent: -9999px; min-width: 24px; height: 24px; background-repeat: no-repeat; background-position: center;}
+.step03Area section ol li label{background-image: url('../images/ic-file.png'); position: absolute; right: 10px; top: 0; height: 100%;}
+.step03Area section ol li button{background-image: url('../images/ic-delete.png'); margin-left: 20px;}
+.step03Area section > button{display: flex; align-items: center; font-weight: 700; margin-top: 20px;}
+.step03Area section > button::before{content: ''; width: 22px; height: 22px; background: url('../images/ic-add.png') no-repeat center / cover; margin-right: 10px;}
+
