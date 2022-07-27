@@ -105,16 +105,18 @@
 .step01Area .agreeArea fieldset ul li label{justify-content: flex-end;}
 /* .step01Area .agreeArea fieldset ul li label::after{order: -1; margin-left: 10px;} */
 .step01Area .agreeArea fieldset ul li label span{margin-right: auto; line-height: 1;}
-.step01Area .agreeArea .popupArea{display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: white;}
-.step01Area .agreeArea .popupArea div{padding-top: 70px; display: flex; flex-direction: column;}
-.step01Area .agreeArea .popupArea div strong{display: block; font-size: 20px; max-width: 145px; padding: 0 20px; margin-bottom: 30px;}
+.popupArea{display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: white;}
+.popupArea div{padding-top: 70px; display: flex; flex-direction: column;}
+.popupArea div strong{display: block; font-size: 20px; padding: 0 20px; margin-bottom: 30px;}
+.step01Area .agreeArea .popupArea div strong{max-width: 145px;}
 .step01Area .agreeArea .popupArea div .olCase02{flex: 1; overflow: auto;}
 .step01Area .agreeArea .popupArea div .olCase02 li button{font-size: 16px; padding: 25px 20px; border-bottom: 1px solid #e6e6e6;}
 .step01Area .agreeArea .popupArea div .olCase02 li p{display: none; padding: 20px; color: #666666; background-color: #f9f9f9; border-width: 0 1px 1px; border-style: solid; border-color: #e6e6e6;}
-.step01Area .agreeArea .popupArea .closeBtn{position: absolute; right: 20px; top: 20px;}
-.step01Area .agreeArea .popupArea.active{display: block;}
+.popupArea .closeBtn{position: absolute; right: 20px; top: 20px;}
+.popupArea.active{display: block;}
 
 /* 보험금 청구 - STEP02 */
+.step02Area .olCase02 li:not(:last-child){margin-bottom: 30px;}
 .step02Area .olCase02 li button{font-size: 20px; padding: 20px 0; border-bottom: 1px solid black;}
 .step02Area .olCase02 li fieldset p{color: #666666; margin-top: 20px;}
 .step02Area .olCase02 li fieldset ul{font-weight: 700; margin-top: 30px;}
@@ -146,9 +148,19 @@
 .step03Area section ol li::before{width: 100%; margin-bottom: 10px;}
 .step03Area section ol li div{flex: 1; position: relative;}
 .step03Area section ol li div input[type="file"]{display: none;}
-.step03Area section ol li :is(label , button){ text-indent: -9999px; min-width: 24px; height: 24px; background-repeat: no-repeat; background-position: center;}
-.step03Area section ol li label{background-image: url('../images/ic-file.png'); position: absolute; right: 10px; top: 0; height: 100%;}
-.step03Area section ol li button{background-image: url('../images/ic-delete.png'); margin-left: 20px;}
+.step03Area section ol li div button{position: absolute; right: 10px; top: 0; height: 100%;}
+.step03Area section ol li button{margin-left: 20px;}
 .step03Area section > button{display: flex; align-items: center; font-weight: 700; margin-top: 20px;}
 .step03Area section > button::before{content: ''; width: 22px; height: 22px; background: url('../images/ic-add.png') no-repeat center / cover; margin-right: 10px;}
+
+.step03Area .menuArea{ position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex; align-items: center;}
+.step03Area .menuArea > div{background-color: white; padding: 25px; box-sizing: border-box;}
+.step03Area .menuArea > div > b{display: block; font-size: 18px; margin-bottom: 25px;}
+.step03Area .menuArea > div > ul > li{border: 1px solid black;}
+.step03Area .menuArea > div > ul > li:not(:last-child){margin-bottom: 10px;}
+.step03Area .menuArea > div > ul > li > button{width: 100%; line-height: 50px; font-size: 14px; font-weight: 700; text-align: left; padding: 0 20px 0 65px; background-repeat: no-repeat; background-position: left 20px center;}
+.step03Area .menuArea > div > ul > li:nth-child(1) > button{background-image: url('../images/ic-camera.png');}
+.step03Area .menuArea > div > ul > li:nth-child(2) > button{background-image: url('../images/ic-gallery.png');}
+.step03Area .menuArea > div > ul > li:nth-child(3) > button{background-image: url('../images/ic-file.png');}
+.step03Area .menuArea.active{display: flex;}
 

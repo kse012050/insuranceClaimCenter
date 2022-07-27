@@ -5,9 +5,11 @@ $(document).ready(function(){
     // 메인 메뉴 클릭
     $('[data-event="menu"]').click(function(){
         $('.sideMenu').addClass('active');
+        $('.menuArea').addClass('active');
     })
     $('[data-event="menuClose"]').click(function(){
         $('.sideMenu').removeClass('active');
+        $('.menuArea').removeClass('active');
     })
     $('.mainPage nav .sideMenu > div > ul > li > a').click(function(e){
         if($(this).attr('href') === '#'){
@@ -15,6 +17,12 @@ $(document).ready(function(){
             $('.mainPage nav .sideMenu > div > ul > li > ul').stop().slideUp();
             $(this).next().stop().slideDown();
         }
+    })
+    $('.sideMenu , .menuArea').click(function(){
+        $(this).removeClass('active');
+    })
+    $('.sideMenu > * , .menuArea > *').click(function(e){
+        e.stopPropagation();
     })
 
     // 스크롤 , 터치 이벤트
@@ -40,6 +48,7 @@ $(document).ready(function(){
         })
     })
 
+
     // 드랍박스
     $('[data-event="drop"]').click(function(e){
         e.preventDefault();
@@ -49,5 +58,8 @@ $(document).ready(function(){
         $(this).next().stop().slideDown();
     })
 
+    $('form button').click(function(e){
+        e.preventDefault();
+    })
     
 })

@@ -115,6 +115,11 @@ input[type="checkBox"] + label{line-height: 1; display: flex; align-items: cente
 input[type="checkBox"] + label::after{content: ''; width: 15px; height: 15px; background-image: url('../images/chevk-box.png'); background-repeat: no-repeat; background-position: center; background-size: cover; margin-left: 10px;}
 input[type="checkBox"]:checked + label::after{background-image: url('../images/chevk-box-s.png');}
 
+/* 아이콘  */
+[data-icon]{text-indent: -9999px; min-width: 24px; height: 24px; background-repeat: no-repeat; background-position: center;}
+[data-icon="file"]{background-image: url('../images/ic-file.png');}
+[data-icon="delete"]{background-image: url('../images/ic-delete.png');}
+
 
 /* 하단 링크 */
 .bottomLink-fix{position: fixed; left: 0; bottom: 0; width: 100%;}
