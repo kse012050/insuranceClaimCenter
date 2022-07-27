@@ -124,13 +124,12 @@ input[type="checkBox"]:checked + label::after{background-image: url('../images/c
 
 
 /* 하단 링크 */
-.bottomLink-fix{position: fixed; left: 0; bottom: 0; width: 100%;}
-[class|='bottomLink']{ background-color: black;}
-[class|='bottomLink'] div{display: flex; justify-content: space-between;}
-[class|='bottomLink'] div *{line-height: 55px; font-size: 16px; font-weight: 700;}
-[class|='bottomLink'] div *:only-child{width: 100%; text-align: center;}
-[class|='bottomLink'] div *:last-child{color: #0bbef3;}
-[class|='bottomLink'] div *:not(:only-child):first-child{color: white;}
+.bottomLink{position: fixed; left: 0; bottom: 0; width: 100%; background-color: black;}
+.bottomLink div{display: flex; justify-content: space-between;}
+.bottomLink div *{line-height: 55px; font-size: 16px; font-weight: 700;}
+.bottomLink div *:only-child{width: 100%; text-align: center;}
+.bottomLink div *:last-child{color: #0bbef3;}
+.bottomLink div *:not(:only-child):first-child{color: white;}
 
 /* 푸터 */
 footer{padding: 40px 0; font-size: 13px; background-color: #f3f3f3;}
