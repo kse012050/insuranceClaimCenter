@@ -107,6 +107,7 @@ button.closeBtn::after{transform:translate(-50% , -50%) rotate(-45deg);}
 .starGuide::before{content: '*';}
 
 /* 입력 박스 공통 */
+textarea{resize: none;}
 input:not([type="checkbox"]) , select{ height: 50px;}
 input:not([type="checkbox"]) , select , textarea{width: 100%; padding: 15px; border: 1px solid #e6e6e6; box-sizing: border-box;}
 /* 체크박스 */
