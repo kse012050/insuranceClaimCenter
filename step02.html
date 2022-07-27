@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Iphone 모바일 확대 방지 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=0">
+    <title>STEP02 보험금 청구 - 보험 중계 청구센터</title>
+    <link rel="stylesheet" href="css/import.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <div class="subPage step02Area">
+        <header class="bgColor">
+            <div>
+                <h1 class="hiddenTitle">보험 중계 청구 센터</h1>
+                <div class="subTitle width02">
+                    <a>이전 페이지</a>
+                    <h2>STEP02</h2>
+                    <p>
+                        <strong>보험금 청구 상세 내용</strong>을<br/>
+                        입력해주세요
+                    </p>
+                </div>
+            </div>
+        </header>
+        <div class="width04">
+            <form>
+                <ol class="olCase02">
+                    <li>
+                        <button>사고내용</button>
+                        <fieldset>
+                            <ul>
+                                <li>
+                                    <label for="">사고 일시</label>
+                                    <input type="month" id="monthBox">
+                                    <!-- <div>
+                                        <input type="text" readonly>
+                                        <input type="month" id="monthBox">
+                                        <label for="monthBox">년도 월 일</label>
+                                    </div> -->
+                                    <div class="twoBox">
+                                        <div data-FE="down">
+                                            <select>
+                                                <option value="">시간</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                        <div data-FE="down">
+                                            <select>
+                                                <option value="">분</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="">사고 장소</label>
+                                    <input type="text">
+                                </li>
+                                <li>
+                                    <label for="">사고 유형</label>
+                                    <select>
+                                        <option value=""></option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="">사고 내용</label>
+                                    <textarea placeholder="작성예시) 운전 부주의로 인하여 전신주를 충격한 단독사고발생"></textarea>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <button>인적사항</button>
+                        <fieldset>
+                            <p class="starGuide">보험금 청구권자는 차량 명의자입니다.</p>
+                            <ul>
+                                <li>
+                                    <label for="">차량 명의자 성명</label>
+                                    <input type="text">
+                                </li>
+                                <li>
+                                    <label for="">명의자 주민번호</label>
+                                    <input type="text">
+                                </li>
+                                <li>
+                                    <label for="">명의자 연락처</label>
+                                    <input type="text">
+                                </li>
+                                <li>
+                                    <label for="">운전자 성명</label>
+                                    <input type="text">
+                                </li>
+                                <li>
+                                    <label for="">운전자 연락처</label>
+                                    <input type="text">
+                                    <input type="checkbox">
+                                    <label for="">명의자 본인</label>
+                                </li>
+                                <li>
+                                    <label for="">차주와의 관계</label>
+                                    <input type="text">
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <button>자동차 보험 처리 결과</button>
+                        <fieldset>
+                            <ul>
+                                <li>
+                                    <label for="">가입 보험사</label>
+                                    <input type="text" placeholder="보험사 상호를 입력해주세요">
+                                </li>
+                                <li>
+                                    <label for="">실 납입 자기부담금</label>
+                                    <div data-FE="원">
+                                        <input type="text">
+                                    </div>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <button>보험금 수령 계좌</button>
+                        <fieldset>
+                            <p class="starGuide">보험금 수령권자는 명의자입니다.</p>
+                            <ul>
+                                <li>
+                                    <label for="">은행명</label>
+                                    <input type="text">
+                                </li>
+                                <li>
+                                    <label for="">명의자 계좌번호</label>
+                                    <input type="text">
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </li>
+                </ol>
+            </form>
+        </div>
+        <div class="bottomLink">
+            <div class="width04">
+                <a href="#">이전</a>
+                <a href="#">다음</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

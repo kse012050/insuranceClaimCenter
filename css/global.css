@@ -66,7 +66,7 @@ button.moreBtn::after{width: 20px; height: 20px; background-image: url('../image
 
 /* 리스트 케이스 */
 /* ol */
-[class*='olCase'] li{counter-increment: olList01;}
+[class*='olCase'] > li{counter-increment: olList01;}
 /* ol - 01*/
 .olCase01 li{padding-top: 15px; display: flex;}
 .olCase01 li::before{content: counter(olList01); font-weight: 700; margin-right: 20px;}
@@ -79,15 +79,15 @@ button.moreBtn::after{width: 20px; height: 20px; background-image: url('../image
 
 
 /* ul */
-[class*="ulCase"] ::before{margin-right: 5px;}
+[class*="ulCase"] > ::before{margin-right: 5px;}
 /* ul - 01*/
-.ulCase01 li{display: flex; }
-.ulCase01 li::before{content: '•';}
+.ulCase01 > li{display: flex; }
+.ulCase01 > li::before{content: '•';}
 /* ul - 02*/
-.ulCase02 li:not(:last-child){margin-bottom: 10px;}
-.ulCase02 li > *{display: flex;}
-.ulCase02 li > *::before{content: ''; min-width: 12px; height: 20px; background-repeat: no-repeat; background-position: center; background-size: cover;}
-.ulCase02 li > p::before{background-image: url('../images/ic-check.png');}
+.ulCase02 > li:not(:last-child){margin-bottom: 10px;}
+.ulCase02 > li > *{display: flex;}
+.ulCase02 > li > *::before{content: ''; min-width: 12px; height: 20px; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.ulCase02 > li > p::before{background-image: url('../images/ic-check.png');}
 
 
 /* popup
@@ -98,6 +98,15 @@ button.closeBtn{width: 24px; height: 24px; position: relative;  text-indent: -99
 button.closeBtn::before ,button.closeBtn::after{content: ''; position: absolute; left: 50%; top: 50%; width: 75%; height: 2px; background-color: black;}
 button.closeBtn::before{transform:translate(-50% , -50%) rotate(45deg);}
 button.closeBtn::after{transform:translate(-50% , -50%) rotate(-45deg);}
+
+/* * 표시 */
+.starGuide::before{content: '*';}
+
+/* 체크박스 */
+input[type="checkBox"]{display: none;}
+input[type="checkBox"] + label{line-height: 1; display: flex; align-items: center;}
+input[type="checkBox"] + label::after{content: ''; width: 15px; height: 15px; background-image: url('../images/chevk-box.png'); background-repeat: no-repeat; background-position: center; background-size: cover; margin-left: 10px;}
+input[type="checkBox"]:checked + label::after{background-image: url('../images/chevk-box-s.png');}
 
 
 /* 하단 링크 */

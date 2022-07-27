@@ -24,6 +24,7 @@ time, mark, audio, video {
 	line-height: 1.33;
 	vertical-align: baseline;
 }
+input , textarea{font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -75,6 +76,6 @@ input[type="search"]::-webkit-search-results-decoration{
 
 a{text-decoration: none; color: inherit; display: inline-block;}
 
-button{background-color: transparent; border: none; cursor: pointer; font: inherit;}
+button{background-color: transparent; border: none; cursor: pointer; font: inherit; padding: 0;}
 
 mark{background-color: transparent;}
