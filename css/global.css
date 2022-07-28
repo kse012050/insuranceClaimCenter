@@ -37,10 +37,10 @@ strong{font-weight: 700;}
 
 
 /* close 버튼 */
-button.closeBtn{width: 24px; height: 24px; position: relative;  text-indent: -9999px;}
-button.closeBtn::before ,button.closeBtn::after{content: ''; position: absolute; left: 50%; top: 50%; width: 75%; height: 2px; background-color: black;}
-button.closeBtn::before{transform:translate(-50% , -50%) rotate(45deg);}
-button.closeBtn::after{transform:translate(-50% , -50%) rotate(-45deg);}
+.closeBtn{width: 24px; height: 24px; position: relative;  text-indent: -9999px;}
+.closeBtn::before ,.closeBtn::after{content: ''; position: absolute; left: 50%; top: 50%; width: 75%; height: 2px; background-color: black;}
+.closeBtn::before{transform:translate(-50% , -50%) rotate(45deg);}
+.closeBtn::after{transform:translate(-50% , -50%) rotate(-45deg);}
 
 
 /* more 버튼*/
