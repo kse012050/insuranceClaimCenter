@@ -23,7 +23,7 @@
 .mainPage section ul li:nth-child(3) a{background-image: url('../images/ic-info.png');}
 
 /* 메인 메뉴 */
-.mainPage nav{ position: fixed; left: 0; bottom: 0; width: 100%; border-top: 1px solid rgba(0, 0, 0, 0.2); background-color: white;}
+.mainPage nav{ position: fixed; left: 0; bottom: 0; width: 100%; border-top: 1px solid rgba(0, 0, 0, 0.2); background-color: white; z-index: 1;}
 .mainPage nav .mainManu ul{display: flex;}
 .mainPage nav .mainManu ul li{flex: 1;}
 .mainPage nav .mainManu ul li :is(a , button){display: block; width: 100%; line-height: 55px; text-indent: -9999px; background-repeat: no-repeat; background-position: center; opacity: 0.5;}
