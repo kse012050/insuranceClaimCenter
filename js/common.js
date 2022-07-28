@@ -1,75 +1,54 @@
 $(document).ready(function(){
-    $('*').hasClass('sideMenu') && $('body').css('padding-bottom' , '50px');
-    // $('*').hasClass('subPage') && $('.subPage').css('padding-top' , $('.subPage header').height() + 50);
+    // click event
+    clickEvent();
 
+    // scroll event
     $('.subPage02').attr('data-scroll') === 'fixed' && scrollEvent();
+    
+})
 
-    function scrollEvent(){
-        $('header + *').css('paddingTop' , $('header').height())
-        $(window).scroll(function(){
-            $(window).scrollTop() > 0 ? $('header').addClass('active') : $('header').removeClass('active')
-        })
-        
-    }
+function scrollEvent(){
+    $('header + *').css('paddingTop' , $('header').height())
+    $(window).scroll(function(){
+        $(window).scrollTop() > 0 ? $('header').addClass('active') : $('header').removeClass('active')
+    })
+}
 
-    // 메인 메뉴 클릭
-    $('[data-event="menu"]').click(function(){
-        $('.sideMenu').addClass('active');
-        $('.menuArea').addClass('active');
+function clickEvent(){
+    // menu
+    let clickAttr;
+    let menuSelector = $('[data-menu]');
+    $('[data-click]').click(function(e){
+        clickAttr = $(this).attr('data-click');
+        clickAttr === 'menu' && clickEvent();
+        clickAttr === 'drop' && dropEvent(e ,$(this).attr('data-drop'));
     })
-    $('[data-event="menuClose"]').click(function(){
-        $('.sideMenu').removeClass('active');
-        $('.menuArea').removeClass('active');
+    
+    menuSelector.click(()=>{
+        menuSelector.removeClass('active');
     })
-    $('.mainPage nav .sideMenu > div > ul > li > a').click(function(e){
-        if($(this).attr('href') === '#'){
-            e.preventDefault();
-            $('.mainPage nav .sideMenu > div > ul > li > ul').stop().slideUp();
-            $(this).next().stop().slideDown();
-        }
-    })
-    $('.sideMenu , .menuArea').click(function(){
-        $(this).removeClass('active');
-    })
-    $('.sideMenu > * , .menuArea > *').click(function(e){
+    menuSelector.children().click((e)=>{
         e.stopPropagation();
     })
 
-    // 스크롤 , 터치 이벤트
-    if($('.subPage').attr('data-event') === 'scroll'){
-        $(window).scroll(function(e){
-            if($(window).scrollTop() > 0){
-                $('.subPage header').addClass('active');
-            }else{
-                $('.subPage header').removeClass('active')
-            }
-        })
+    $('[data-close]').click(function(){
+        closeSelector = $('[data-'+$(this).attr('data-close')+'="area"]');
+        closeSelector.removeClass('active');
+    });
+
+    function clickEvent(){
+        menuSelector.addClass('active');
     }
 
-    // 팝업 열고 닫기
-    $('[data-event*="popup"]').click(function(e){
-        e.preventDefault();
-        let attrName = $(this).attr('data-event');
-        $('[data-event="'+attrName+'Open"]').addClass('active');
-        console.log(2);
-        $('[data-event="'+attrName+'Close"]').click(function(e){
-            e.preventDefault();
-            $('[data-event="'+attrName+'Open"]').removeClass('active');
-        })
-    })
 
-
-    // 드랍박스
-    $('[data-event="drop"]').click(function(e){
-        e.preventDefault();
-        $('[data-event="drop"]').removeClass('active');
-        $(this).addClass('active');
-        $('[data-event="drop"] + *').stop().slideUp();
-        $(this).next().stop().slideDown();
-    })
-
-    $('form button').click(function(e){
-        e.preventDefault();
-    })
+    // drop event
+    function dropEvent(e , dropNum){
+        let dropSelector = $('[data-click="drop"] > li > *');
+        dropNum === 'one' && dropSelector.next().stop().slideUp();
+        dropNum === 'all' && ($(e.target).prop("tagName") === "BUTTON" && e.preventDefault());
+        ($(e.target).prop("tagName") === "BUTTON" || $(e.target).prop("tagName") === "A") && $(e.target).next().stop().slideToggle();
+        ($(e.target).prop("tagName") === "BUTTON") && $(e.target).toggleClass('active');
+            
+    }
     
-})
+}

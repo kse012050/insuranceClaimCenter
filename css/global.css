@@ -8,14 +8,87 @@
 .claimArea{padding-bottom: 50px;}
 .termsArea{padding-bottom: 100px;}
 
+
 /* 메인 색상 */
 mark{color: #0bbef3;}
 mark.under{text-decoration: underline;}
 
+
 strong{font-weight: 700;}
+
 
 /* 숨겨진 타이틀 */
 .hiddenTitle{height: 0.1px; overflow: hidden;}
+
+
+/* 아이콘  */
+[data-icon]{text-indent: -9999px; min-width: 24px; height: 24px; background-repeat: no-repeat; background-position: center;}
+[data-icon="file"]{background-image: url('../images/ic-file.png');}
+[data-icon="delete"]{background-image: url('../images/ic-delete.png');}
+
+
+/* * 표시 */
+.starGuide::before{content: '*';}
+
+
+/* close 버튼 */
+button.closeBtn{width: 24px; height: 24px; position: relative;  text-indent: -9999px;}
+button.closeBtn::before ,button.closeBtn::after{content: ''; position: absolute; left: 50%; top: 50%; width: 75%; height: 2px; background-color: black;}
+button.closeBtn::before{transform:translate(-50% , -50%) rotate(45deg);}
+button.closeBtn::after{transform:translate(-50% , -50%) rotate(-45deg);}
+
+
+/* more 버튼*/
+.moreBtn{display: flex; align-items: center; line-height: 1;}
+.moreBtn::after{content: ''; background-repeat: no-repeat; background-position: center; background-size: cover;}
+a.moreBtn::after{width: 15px; height: 15px; background-image: url('../images/ic-more-color.png'); margin-left: 2px;}
+button.moreBtn::after{width: 20px; height: 20px; background-image: url('../images/ic-more.png'); margin-left: 5px;}
+
+
+/* 입력 박스 공통 */
+textarea{resize: none;}
+input:not([type="checkbox"]) , select{ height: 50px;}
+input:not([type="checkbox"]) , select , textarea{width: 100%; padding: 15px; border: 1px solid #e6e6e6; box-sizing: border-box;}
+/* 체크박스 */
+input[type="checkBox"]{display: none;}
+input[type="checkBox"] + label{line-height: 1; display: flex; align-items: center;}
+input[type="checkBox"] + label::after{content: ''; width: 15px; height: 15px; background-image: url('../images/chevk-box.png'); background-repeat: no-repeat; background-position: center; background-size: cover; margin-left: 10px;}
+input[type="checkBox"]:checked + label::after{background-image: url('../images/chevk-box-s.png');}
+
+
+/* 리스트 케이스 */
+/* ol */
+[class*='olCase'] > li{counter-increment: olList01;}
+/* ol - 01*/
+.olCase01 li{padding-top: 15px; display: flex;}
+.olCase01 li::before{content: counter(olList01); font-weight: 700; margin-right: 20px;}
+.olCase01 li p{flex: 1; padding-bottom: 15px; border-bottom: 1px solid #e6e6e6;}
+/* ol - 02*/
+.olCase02 li button{width: 100%; display: flex; align-items: center; justify-content: flex-start; font-weight: 700;}
+.olCase02 li button::before{content:'0' counter(olList01); margin-right: 5px;}
+.olCase02 li button::after{content: ''; width: 24px; height: 24px; background: url('../images/ic-up.png') no-repeat center / cover; margin-left: auto; transition: 0.5s;}
+.olCase02 li button.active::after{transform: rotate(180deg);}
+/* ol - 03 */
+.olCase03 li::before{content: counter(olList01) '. ' attr(title); font-weight: 700;}
+
+/* ul */
+[class*="ulCase"] > ::before{margin-right: 5px;}
+/* ul - 01*/
+.ulCase01 > li{display: flex; }
+.ulCase01 > li::before{content: '•';}
+/* ul - 02*/
+.ulCase02 > li:not(:last-child){margin-bottom: 10px;}
+.ulCase02 > li > *{display: flex;}
+.ulCase02 > li > *::before{content: ''; min-width: 12px; height: 20px; background-repeat: no-repeat; background-position: center; background-size: cover; margin-right: 10px;}
+.ulCase02 > li > p::before{background-image: url('../images/ic-check.png');}
+.ulCase02 > li > mark::before{background-image: url('../images/ic-check-color.png');}
+
+
+/* 클릭 메뉴 */
+[data-menu="area"]{display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);}
+[data-menu="area"] > div{background-color: white;}
+[data-menu="area"].active{display: flex;}
+
 
 /* 서브페이지 */
 /* 서브 페이지 공통 */
@@ -24,7 +97,6 @@ strong{font-weight: 700;}
 .subPage ~ strong{display: block; margin-bottom: 20px;}
 .subPage header ~ *:not(:last-child){margin-bottom: 50px;}
 .subPage header ~ div > *:not(:last-child){margin-bottom: 50px;}
-/* .subPage header ~ div > *:not(:last-child):not(:last-of-type){margin-bottom: 50px;} */
 
 /* 서브 타이틀 */
 .subPage header > div{max-width: calc(100% - 20px); width: calc(640px - 20px); margin: 0 auto;}
@@ -101,74 +173,9 @@ strong{font-weight: 700;}
 .subPage02 header.BGColor ~ div:nth-of-type(1){margin-top: 50px;}
 
 
-
-
 /* 서브 타이틀과 컨텐츠 사이 간격 */
 .subPage header.bgColor + *{margin-top: 50px;}
 .subPage header:not(.bgColor) + *{margin-top: 30px;}
-
-/* more 버튼*/
-.moreBtn{display: flex; align-items: center; line-height: 1;}
-.moreBtn::after{content: ''; background-repeat: no-repeat; background-position: center; background-size: cover;}
-a.moreBtn::after{width: 15px; height: 15px; background-image: url('../images/ic-more-color.png'); margin-left: 2px;}
-button.moreBtn::after{width: 20px; height: 20px; background-image: url('../images/ic-more.png'); margin-left: 5px;}
-
-
-/* 리스트 케이스 */
-/* ol */
-[class*='olCase'] > li{counter-increment: olList01;}
-/* ol - 01*/
-.olCase01 li{padding-top: 15px; display: flex;}
-.olCase01 li::before{content: counter(olList01); font-weight: 700; margin-right: 20px;}
-.olCase01 li p{flex: 1; padding-bottom: 15px; border-bottom: 1px solid #e6e6e6;}
-/* ol - 02*/
-.olCase02 li button{width: 100%; display: flex; align-items: center; justify-content: flex-start; font-weight: 700;}
-.olCase02 li button::before{content:'0' counter(olList01); margin-right: 5px;}
-.olCase02 li button::after{content: ''; width: 24px; height: 24px; background: url('../images/ic-up.png') no-repeat center / cover; margin-left: auto; transition: 0.5s;}
-.olCase02 li button.active::after{transform: rotate(180deg);}
-/* ol - 03 */
-.olCase03 li::before{content: counter(olList01) '. ' attr(title); font-weight: 700;}
-
-
-/* ul */
-[class*="ulCase"] > ::before{margin-right: 5px;}
-/* ul - 01*/
-.ulCase01 > li{display: flex; }
-.ulCase01 > li::before{content: '•';}
-/* ul - 02*/
-.ulCase02 > li:not(:last-child){margin-bottom: 10px;}
-.ulCase02 > li > *{display: flex;}
-.ulCase02 > li > *::before{content: ''; min-width: 12px; height: 20px; background-repeat: no-repeat; background-position: center; background-size: cover; margin-right: 10px;}
-.ulCase02 > li > p::before{background-image: url('../images/ic-check.png');}
-.ulCase02 > li > mark::before{background-image: url('../images/ic-check-color.png');}
-
-
-/* popup
-.popupArea div{padding-top: 70px;} */
-
-/* close 버튼 */
-button.closeBtn{width: 24px; height: 24px; position: relative;  text-indent: -9999px;}
-button.closeBtn::before ,button.closeBtn::after{content: ''; position: absolute; left: 50%; top: 50%; width: 75%; height: 2px; background-color: black;}
-button.closeBtn::before{transform:translate(-50% , -50%) rotate(45deg);}
-button.closeBtn::after{transform:translate(-50% , -50%) rotate(-45deg);}
-
-/* * 표시 */
-.starGuide::before{content: '*';}
-
-/* 입력 박스 공통 */
-textarea{resize: none;}
-input:not([type="checkbox"]) , select{ height: 50px;}
-input:not([type="checkbox"]) , select , textarea{width: 100%; padding: 15px; border: 1px solid #e6e6e6; box-sizing: border-box;}
-/* 체크박스 */
-input[type="checkBox"]{display: none;}
-input[type="checkBox"] + label{line-height: 1; display: flex; align-items: center;}
-input[type="checkBox"] + label::after{content: ''; width: 15px; height: 15px; background-image: url('../images/chevk-box.png'); background-repeat: no-repeat; background-position: center; background-size: cover; margin-left: 10px;}
-input[type="checkBox"]:checked + label::after{background-image: url('../images/chevk-box-s.png');}
-
-/* 아이콘  */
-[data-icon]{text-indent: -9999px; min-width: 24px; height: 24px; background-repeat: no-repeat; background-position: center;}
-[data-icon="file"]{background-image: url('../images/ic-file.png');}
-[data-icon="delete"]{background-image: url('../images/ic-delete.png');}
 
 
 /* 하단 링크 */
@@ -178,6 +185,7 @@ input[type="checkBox"]:checked + label::after{background-image: url('../images/c
 .bottomLink div *:only-child{width: 100%; text-align: center;}
 .bottomLink div *:last-child{color: #0bbef3;}
 .bottomLink div *:not(:only-child):first-child{color: white;}
+
 
 /* 푸터 */
 footer{padding: 40px 0; font-size: 13px; background-color: #f3f3f3;}

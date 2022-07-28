@@ -32,7 +32,7 @@
 .mainPage nav .mainManu ul li:nth-child(3) :is(a , button){background-image: url('../images/ic-search.png');}
 .mainPage nav .mainManu ul li:nth-child(4) :is(a , button){background-image: url('../images/ic-menu.png');}
 .mainPage nav .mainManu ul li.active a{opacity: 1;}
-.mainPage nav .sideMenu{display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);}
+/* .mainPage nav .sideMenu{display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);} */
 .mainPage nav .sideMenu > div{width: 290px; margin-left: auto; height: 100%; background-color: white;}
 .mainPage nav .sideMenu > div div{display: flex; justify-content: space-between; align-items: center; padding: 15px;}
 .mainPage nav .sideMenu > div div h2{font-size: 16px; font-weight: 500;}
@@ -48,7 +48,7 @@
 .mainPage nav .sideMenu > div > ul > li ul{display: none;}
 .mainPage nav .sideMenu > div > ul > li ul li a{padding: 10px; font-size: 15px; font-weight: 300; color: #666;}
 /* .mainPage nav .sideMenu > div > ul > li.active ul{padding-bottom: 20px;} */
-.mainPage nav .sideMenu.active{display: block;}
+/* .mainPage nav .sideMenu.active{display: flex;} */
 
 
 /* 이용약관 */
@@ -154,7 +154,7 @@
 .step03Area section > button{display: flex; align-items: center; font-weight: 700; margin-top: 20px;}
 .step03Area section > button::before{content: ''; width: 22px; height: 22px; background: url('../images/ic-add.png') no-repeat center / cover; margin-right: 10px;}
 
-.step03Area .menuArea{ position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: none; align-items: center;}
+.step03Area .menuArea{align-items: center;}
 .step03Area .menuArea > div{background-color: white; padding: 25px; box-sizing: border-box;}
 .step03Area .menuArea > div > b{display: block; font-size: 18px; margin-bottom: 25px;}
 .step03Area .menuArea > div > ul > li{border: 1px solid black;}
@@ -163,7 +163,7 @@
 .step03Area .menuArea > div > ul > li:nth-child(1) > button{background-image: url('../images/ic-camera.png');}
 .step03Area .menuArea > div > ul > li:nth-child(2) > button{background-image: url('../images/ic-gallery.png');}
 .step03Area .menuArea > div > ul > li:nth-child(3) > button{background-image: url('../images/ic-file.png');}
-.step03Area .menuArea.active{display: flex;}
+
 
 /* 보험금 청구 - STEP04 */
 .step04Area > div strong{display: block; margin-bottom: 10px;}
