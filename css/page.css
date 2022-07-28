@@ -53,10 +53,11 @@
 
 /* 로그인 */
 .loginArea{margin-bottom: 60px;}
-.loginArea > div section{padding-top: 70px; position: relative;}
+.loginArea > div section{padding-top: 70px; position: relative; text-align: center;}
 .loginArea > div section h2{font-size: 20px; font-weight: 700; margin-bottom: 10px;}
-.loginArea > div section p{max-width: 275px; font-weight: 300; margin-bottom: 55px;}
+.loginArea > div section p{max-width: 275px; font-weight: 300; margin:0 auto 55px;}
 .loginArea > div section > a{position: absolute; right: 10px; top: 15px;}
+.loginArea > div section ul{text-align: left;}
 .loginArea > div section ul li:not(:last-child){margin-bottom: 30px;}
 .loginArea > div section ul li label{display: block; font-weight: 700; margin-bottom: 10px;}
 .loginArea > div section ul li input:not(:last-of-type){margin-bottom: 10px;}

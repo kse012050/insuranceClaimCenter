@@ -7,13 +7,6 @@ $(document).ready(function(){
     
 })
 
-function scrollEvent(){
-    $('header + *').css('paddingTop' , $('header').height())
-    $(window).scroll(function(){
-        $(window).scrollTop() > 0 ? $('header').addClass('active') : $('header').removeClass('active')
-    })
-}
-
 function clickEvent(){
     // menu
     let clickAttr;
@@ -54,5 +47,12 @@ function clickEvent(){
     
     $('form button').click((e)=>{
         e.preventDefault();
+    })
+}
+
+function scrollEvent(){
+    $('header + *').css('paddingTop' , $('header').height())
+    $(window).scroll(function(){
+        $(window).scrollTop() > 0 ? $('header').addClass('active') : $('header').removeClass('active')
     })
 }
