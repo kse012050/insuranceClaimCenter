@@ -2,6 +2,16 @@ $(document).ready(function(){
     $('*').hasClass('sideMenu') && $('body').css('padding-bottom' , '50px');
     // $('*').hasClass('subPage') && $('.subPage').css('padding-top' , $('.subPage header').height() + 50);
 
+    $('.subPage02').attr('data-scroll') === 'fixed' && scrollEvent();
+
+    function scrollEvent(){
+        $('header + *').css('paddingTop' , $('header').height())
+        $(window).scroll(function(){
+            $(window).scrollTop() > 0 ? $('header').addClass('active') : $('header').removeClass('active')
+        })
+        
+    }
+
     // 메인 메뉴 클릭
     $('[data-event="menu"]').click(function(){
         $('.sideMenu').addClass('active');
