@@ -74,22 +74,22 @@
 
 /* 지원서비스 센터 */
 /* 지원서비스 센터 - 보상 한도 */
-.termsArea .compensationArea ul li{display: flex; align-items: center; height: 65px; font-size: 16px; border: 1px solid black;}
-.termsArea .compensationArea ul li:not(:last-child){margin-bottom: 10px;}
-.termsArea .compensationArea ul li::before{content: attr(title);  width: 90px; font-size: 18px; font-weight: 700; text-align: center;}
+.supportArea .compensationArea ul li{display: flex; align-items: center; height: 65px; font-size: 16px; border: 1px solid black;}
+.supportArea .compensationArea ul li:not(:last-child){margin-bottom: 10px;}
+.supportArea .compensationArea ul li::before{content: attr(title);  width: 90px; font-size: 18px; font-weight: 700; text-align: center;}
 
 /* 지원서비스 센터 - 자기부담금 지급 절차 */
-.termsArea .selfPay ol{margin-bottom: 20px;}
-.termsArea .selfPay ol li{align-items: center;}
-.termsArea .selfPay ol li:before{margin-right: 15px;}
-.termsArea .selfPay ol li:not(:last-child){margin-bottom: 15px;}
-.termsArea .selfPay ol li strong{display: flex; align-items: center;}
-.termsArea .selfPay ol li strong::before{content: ''; min-width: 90px; height: 90px; background-repeat: no-repeat; background-position: center; background-size: cover; border-radius: 100%; background-color: #f9f9f9; margin-right: 20px;}
-.termsArea .selfPay ol li:nth-child(1) strong::before{background-image: url('../images/ic-step-1.png');}
-.termsArea .selfPay ol li:nth-child(2) strong::before{background-image: url('../images/ic-step-2.png');}
-.termsArea .selfPay ol li:nth-child(3) strong::before{background-image: url('../images/ic-step-3.png');}
-.termsArea .selfPay ol li:nth-child(4) strong::before{background-image: url('../images/ic-step-4.png');}
-.termsArea .selfPay ol li:nth-child(5) strong::before{background-image: url('../images/ic-step-5.png');}
+.supportArea .selfPay ol{margin-bottom: 20px;}
+.supportArea .selfPay ol li{align-items: center;}
+.supportArea .selfPay ol li:before{margin-right: 15px;}
+.supportArea .selfPay ol li:not(:last-child){margin-bottom: 15px;}
+.supportArea .selfPay ol li strong{display: flex; align-items: center;}
+.supportArea .selfPay ol li strong::before{content: ''; min-width: 90px; height: 90px; background-repeat: no-repeat; background-position: center; background-size: cover; border-radius: 100%; background-color: #f9f9f9; margin-right: 20px;}
+.supportArea .selfPay ol li:nth-child(1) strong::before{background-image: url('../images/ic-step-1.png');}
+.supportArea .selfPay ol li:nth-child(2) strong::before{background-image: url('../images/ic-step-2.png');}
+.supportArea .selfPay ol li:nth-child(3) strong::before{background-image: url('../images/ic-step-3.png');}
+.supportArea .selfPay ol li:nth-child(4) strong::before{background-image: url('../images/ic-step-4.png');}
+.supportArea .selfPay ol li:nth-child(5) strong::before{background-image: url('../images/ic-step-5.png');}
 
 
 /* 보험금 청구 */

@@ -4,10 +4,10 @@
 .maxWidth{max-width: 640px;}
 .contentWidth{max-width: calc(100% - 40px); width: calc(640px - 40px);}
 
-.termsArea , 
-.claimArea{padding-bottom: 50px;}
-.documentArea , .serviceCenter{padding-bottom: 55px;}
-.FAQArea ,
+ 
+.claimArea , .termsArea{padding-bottom: 50px;}
+.documentArea ,.serviceCenter{padding-bottom: 55px;}
+.claimFin, .FAQArea , .supportArea{padding-bottom: 100px;}
 .step01Area,
 .step02Area,
 .step03Area,
@@ -203,7 +203,7 @@ input[type="checkBox"]:checked + label::after{background-image: url('../images/c
 
 
 /* 푸터 */
-footer{padding: 40px 0; font-size: 13px; background-color: #f3f3f3;}
+footer{padding: 40px 0 95px; font-size: 13px; background-color: #f3f3f3;}
 footer div{ text-align: center; }
 footer div ul{display: flex; justify-content: center; margin-bottom: 20px;}
 footer div ul li:not(:last-child){border-right: 1px solid black;}
