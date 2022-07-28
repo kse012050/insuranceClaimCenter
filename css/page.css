@@ -9,10 +9,10 @@
 .mainPage section div::before ,.mainPage section  div::after{content: ''; position: absolute;}
 .mainPage section > div::before{width: 120px; height: calc(100% - 5px); right: -15px; top: 30px; background-color: #0bbef3; transform-origin: right top; transform: skewX(-45deg);}
 .mainPage section > div::after{width: 168px; height: 168px; right: 0; bottom: 0; background: url('../images/car.png') no-repeat right bottom;}
-.mainPage section > div div{height: 100%; padding: 35px; box-sizing: border-box; overflow: hidden; position: relative;}
-.mainPage section > div div::before ,.mainPage section > div div::after{position: absolute;border-style: solid; border-color: white transparent;}
-.mainPage section > div div::before{border-width: 30px 30px 0; left: -30px; top: 0;}
-.mainPage section > div div::after{border-width: 0 30px 30px; right: -30px; bottom: 0;}
+.mainPage section > div > div{height: 100%; padding: 35px; box-sizing: border-box; overflow: hidden; position: relative;}
+.mainPage section > div > div::before ,.mainPage section > div div::after{position: absolute;border-style: solid; border-color: white transparent;}
+.mainPage section > div > div::before{border-width: 30px 30px 0; left: -30px; top: 0;}
+.mainPage section > div > div::after{border-width: 0 30px 30px; right: -30px; bottom: 0;}
 .mainPage section > div div strong{display: block; font-size: 20px; font-weight: 700; color: white; margin-bottom: 10px;}
 .mainPage section ul{display: flex;}
 .mainPage section ul li{flex: 1;}

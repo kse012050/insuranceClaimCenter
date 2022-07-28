@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="168px" height="168px" viewBox="0 0 168 168" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>477E5FA9-3D03-4D5A-B389-7E39F2B47A35</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="168" height="168"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01_main_최소360" transform="translate(-176.000000, -312.000000)">
+            <g id="bg-main" transform="translate(0.000000, 269.000000)">
+                <g id="Group-6" transform="translate(176.000000, 43.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask"></g>
+                    <g mask="url(#mask-2)">
+                        <g transform="translate(4.000000, 22.529297)">
+                            <g id="Group-3" transform="translate(0.000000, 36.470703)">
+                                <path d="M21.8052687,61 C13.8231302,61 6.91738743,61 1.08804037,61 C-2.12691232,55.810236 1.71842325,38.3900631 13.4821812,32.0386839 C25.2459391,25.6873048 40.0892852,26.1454636 52.6949093,14.3022599 C65.3005334,2.45905616 76.484554,0 94.9305623,0 C113.376571,0 122.862624,4.34642738 135.659397,14.3022599 C142.280123,19.4531555 150.278101,22.7601689 159.65333,24.2233001 C164.523411,24.982135 168.114058,29.1765551 168.11322,34.1054008 L168.11322,57 C168.11322,59.209139 166.322359,61 164.11322,61 L153,61 L153,61" id="Path-2" stroke="#FFFFFF" stroke-width="3"></path>
+                                <circle id="Oval" stroke="#FFFFFF" stroke-width="3" cx="39.5" cy="58.5" r="16.5"></circle>
+                                <circle id="Oval-Copy" stroke="#FFFFFF" stroke-width="3" cx="137.5" cy="58.5" r="16.5"></circle>
+                                <line x1="55" y1="61.5" x2="120" y2="61.5" id="Path-3" stroke="#FFFFFF" stroke-width="3"></line>
+                            </g>
+                            <g id="Group-7" transform="translate(16.000000, 0.000000)">
+                                <line x1="22" y1="122.5" x2="60.5996094" y2="122.5" id="Path-4" stroke="#FFFFFF" stroke-width="3"></line>
+                                <g id="Group-4" transform="translate(32.000000, 18.000000)" stroke="#FFFFFF" stroke-width="3">
+                                    <line x1="12.5" y1="0.970703125" x2="50.5" y2="0.970703125" id="Path-4-Copy"></line>
+                                    <line x1="0.5" y1="0.970703125" x2="9.5" y2="0.970703125" id="Path-4-Copy-2"></line>
+                                </g>
+                                <g id="Group-5" stroke="#FFFFFF" stroke-width="3">
+                                    <line x1="12.5" y1="0.970703125" x2="50.5" y2="0.970703125" id="Path-4-Copy-3"></line>
+                                    <line x1="0.5" y1="0.970703125" x2="9.5" y2="0.970703125" id="Path-4-Copy-4"></line>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
