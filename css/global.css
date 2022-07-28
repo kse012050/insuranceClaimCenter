@@ -185,7 +185,7 @@ input[type="checkBox"]:checked + label::after{background-image: url('../images/c
 /* 서브페이지 상단 스크롤O 공통 */
 .subPage header.active > div h2{padding: 0; transform: translate3d(0 , 0 ,0);;}
 /* 서브페이지 상단 배경X 스크롤O */
-.subPage header:not(.BGColor).active{background-color: #2e3239; color: white; transition-duration: 0s; transition-delay: 0.5s; transition-property: background-color , color; }
+.subPage header:not(.BGColor).active{background-color: #2e3239; color: white; transition-duration: 0.5s; transition-delay: 0.5s; transition-property: background-color , color; }
 .subPage header:not(.BGColor).active > div a{background-image: url('../images/ic-back-white.png'); transition-delay: 0.5s;}
 .subPage header:not(.BGColor).active > nav ul li.active::after{background-color: white;}
 /* 서브페이지 상단 배경O 스크롤O */

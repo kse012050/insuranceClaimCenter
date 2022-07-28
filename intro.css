@@ -1,0 +1,97 @@
+.introArea > div{width: 75%; height: 100vh; background-color: #b5e1ec; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+
+/* intro SVG logo */
+.introArea > div h1{width: 50%; }
+.st0{fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+
+#intro-logo-D{stroke-dasharray: 553; stroke-dashoffset: 553; animation: intro-logo-D 1.5s forwards;}
+@keyframes intro-logo-D{
+    from{stroke-dashoffset: 553;}
+    to{stroke-dashoffset: 0;}
+}
+
+#intro-logo-N{stroke-dasharray: 293; stroke-dashoffset: 293; animation: intro-logo-N 1.5s forwards; animation-delay: 1.3s; }
+@keyframes intro-logo-N{
+    from{stroke-dashoffset: 293;}
+    to{stroke-dashoffset: 0;}
+}
+
+#intro-logo-F{stroke-dasharray: 496; stroke-dashoffset: 496; animation: intro-logo-F 1.5s forwards; animation-delay: 2.5s;}
+@keyframes intro-logo-F{
+    from{stroke-dashoffset: 496;}
+    to{stroke-dashoffset: 0;}
+}
+
+
+#intro-logo-edge{stroke-dasharray: 1281; stroke-dashoffset: 1281; animation: intro-logo-edge 1.5s forwards; animation-delay: 3.8s;}
+@keyframes intro-logo-edge{
+    from{stroke-dashoffset: 1281;}
+    to{stroke-dashoffset: 0;}
+}
+
+#intro-logo-shadow{opacity: 0; animation:intro-logo-shadow 3s forwards; animation-delay: 4.9s;}
+@keyframes intro-logo-shadow{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+/* 인트로 Designer n Frontend (DnF)부분 */
+.introArea > div > div{font-size: 36px; text-align: center; font-weight: bold; }
+.introArea > div > div{}
+.introArea > div > div .word .char{animation: fade 2s ease-in-out forwards; opacity: 0; transform-origin: 0 100%; animation-delay: 5s; text-shadow: 8px 3px 4px rgba(0,0,0,.5);}
+.introArea > div > div .word:nth-of-type(3) .char{animation-delay: 5.05s;}
+.introArea > div > div .word:nth-of-type(1) .char:nth-last-of-type(1) , .intro-dnf-title.words .word:nth-of-type(5) .char:nth-of-type(1){animation-delay: 5.2s;}
+.introArea > div > div .word:nth-of-type(1) .char:nth-last-of-type(2) , .intro-dnf-title.words .word:nth-of-type(5) .char:nth-of-type(2){animation-delay: 5.35s;}
+.introArea > div > div .word:nth-of-type(1) .char:nth-last-of-type(3) , .intro-dnf-title.words .word:nth-of-type(5) .char:nth-of-type(3){animation-delay: 5.5s;}
+.introArea > div > div .word:nth-of-type(1) .char:nth-last-of-type(4) , .intro-dnf-title.words .word:nth-of-type(5) .char:nth-of-type(4){animation-delay: 5.65s;}
+.introArea > div > div .word:nth-of-type(1) .char:nth-last-of-type(5) , .intro-dnf-title.words .word:nth-of-type(5) .char:nth-of-type(5){animation-delay: 5.8s;}
+.introArea > div > div .word:nth-of-type(1) .char:nth-last-of-type(6) , .intro-dnf-title.words .word:nth-of-type(5) .char:nth-of-type(6){animation-delay: 5.95s;}
+.introArea > div > div .word:nth-of-type(1) .char:nth-last-of-type(7) , .intro-dnf-title.words .word:nth-of-type(5) .char:nth-of-type(7){animation-delay: 6.1s;}
+.introArea > div > div .word:nth-of-type(1) .char:nth-last-of-type(8) , .intro-dnf-title.words .word:nth-of-type(5) .char:nth-of-type(8){animation-delay: 6.25s;}
+
+@keyframes fade{
+    100%{opacity: 1; text-shadow: 8px 3px 4px rgba(0,0,0,.5);}
+}
+.intro-dnf-title.words .word .char{animation: .8s cubic-bezier(0.165, 0.44, 0.64, 1) forwards;text-shadow: 8px 3px 4px rgba(0,0,0,.5); opacity: 1;}
+.intro-dnf-title.words:hover .word .char{animation-name: jump;}
+.intro-dnf-title.words > .word:nth-of-type(3) > .char{animation-name: jump;  animation-delay: 0s; animation-iteration-count: infinite; opacity: 1;}
+
+.intro-dnf-title.words:hover .word:nth-of-type(1) .char:nth-last-of-type(1) , .intro-dnf-title.words .word:nth-of-type(5) .char:nth-of-type(1){animation-delay: 0.075s;}
+.intro-dnf-title.words:hover .word:nth-of-type(1) .char:nth-last-of-type(2) , .intro-dnf-title.words .word:nth-of-type(5) .char:nth-of-type(2){animation-delay: 0.15s;}
+.intro-dnf-title.words:hover .word:nth-of-type(1) .char:nth-last-of-type(3) , .intro-dnf-title.words .word:nth-of-type(5) .char:nth-of-type(3){animation-delay: 0.225s;}
+.intro-dnf-title.words:hover .word:nth-of-type(1) .char:nth-last-of-type(4) , .intro-dnf-title.words .word:nth-of-type(5) .char:nth-of-type(4){animation-delay: 0.3s;}
+.intro-dnf-title.words:hover .word:nth-of-type(1) .char:nth-last-of-type(5) , .intro-dnf-title.words .word:nth-of-type(5) .char:nth-of-type(5){animation-delay: 0.375s;}
+.intro-dnf-title.words:hover .word:nth-of-type(1) .char:nth-last-of-type(6) , .intro-dnf-title.words .word:nth-of-type(5) .char:nth-of-type(6){animation-delay: 0.45s;}
+.intro-dnf-title.words:hover .word:nth-of-type(1) .char:nth-last-of-type(7) , .intro-dnf-title.words .word:nth-of-type(5) .char:nth-of-type(7){animation-delay: 0.525s;}
+.intro-dnf-title.words:hover .word:nth-of-type(1) .char:nth-last-of-type(8) , .intro-dnf-title.words .word:nth-of-type(5) .char:nth-of-type(8){animation-delay: 0.6s;}
+
+@keyframes jump {
+    20% {
+      transform: translateY(2%) scaleY(0.9);
+    }
+    40% {
+      transform: translateY(-100%) scaleY(1.2);
+    }
+    50% {
+      transform: translateY(10%) scaleY(0.8);
+    }
+    70% {
+      transform: translateY(-5%) scaleY(1);
+    }
+    80%, 100% {
+      transform: translateY(0) scaleY(1);
+      opacity: 1;
+    }
+  }
+
+
+.introArea{display: flex;}
+.introArea > aside{width: 25%;}
+.introArea > div a{}
+
+@media screen and (max-width:767px){
+    .introArea{display: block;}
+    .introArea > div{width: 100%; height: 75vh;}
+    .introArea > aside{width:100%; height: 25vh;}
+}
+

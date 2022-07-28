@@ -9,7 +9,7 @@ $(document).ready(function(){
     
     
     // 나중에 삭제 미리보기 먼저 보여주기 위해
-    $('*').hasClass('step03Area') && $('body').css('overflow','hidden');
+    $('*').hasClass('step03Area') && $('body');
 
 })
 

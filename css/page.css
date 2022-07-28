@@ -7,7 +7,16 @@
 .mainPage section p{max-width: 230px; margin: 0 auto; font-size: 15px; font-weight: 300; line-height: normal; color: #666; margin-bottom: 30px; position: relative;}
 .mainPage section > div{text-align: left; height: 240px; background: #2e3239;  margin-bottom: 45px; position: relative;}
 .mainPage section div::before ,.mainPage section  div::after{content: ''; position: absolute;}
-.mainPage section > div::before{width: 120px; height: calc(100% - 5px); right: -15px; top: 30px; background-color: #0bbef3; transform-origin: right top; transform: skewX(-45deg);}
+/* .mainPage section > div::before{width: 120px; height: calc(100% - 5px); right: -15px; top: 30px; background-color: #0bbef3; transform-origin: right top; transform: skewX(-45deg);} */
+.mainPage section > div::before{width: 120px; height: 0; right: -15px; top: 30px; background-color: #0bbef3; transform-origin: right top; animation: testBefore 1s 2s cubic-bezier(0.165, 0.44, 0.64, 1) forwards;  transform: skewX(-45deg); }
+@keyframes testBefore {
+    0%{height: 0;}
+    40%{height: calc(100% - 5px);}
+    60%{height: calc(90% - 5px);}
+    70%{height: calc(100% - 5px);}
+    90%{height: calc(98% - 5px);}
+    100%{height: calc(100% - 5px);}
+}
 .mainPage section > div::after{width: 168px; height: 168px; right: 0; bottom: 0; background: url('../images/car.png') no-repeat right bottom;}
 .mainPage section > div > div{height: 100%; padding: 35px; box-sizing: border-box; overflow: hidden; position: relative;}
 .mainPage section > div > div::before ,.mainPage section > div div::after{position: absolute;border-style: solid; border-color: white transparent;}
