@@ -6,7 +6,12 @@
 
 .termsArea , 
 .claimArea{padding-bottom: 50px;}
-.termsArea{padding-bottom: 100px;}
+.documentArea , .serviceCenter{padding-bottom: 55px;}
+.FAQArea ,
+.step01Area,
+.step02Area,
+.step03Area,
+.step04Area{padding-bottom: 105px;}
 
 
 /* 메인 색상 */
@@ -103,7 +108,7 @@ input[type="checkBox"]:checked + label::after{background-image: url('../images/c
 .subPage{font-size: 15px; font-weight: 400; }
 .subPage h3{font-size: 20px; font-weight: 500; margin-bottom: 20px;}
 .subPage ~ strong{display: block; margin-bottom: 20px;}
-.subPage header ~ *:not(:last-child){margin-bottom: 50px;}
+.subPage header ~ *:not(div):not(:last-child){margin-bottom: 50px;}
 .subPage header ~ div > *:not(:last-child){margin-bottom: 50px;}
 
 /* 서브 타이틀 */
