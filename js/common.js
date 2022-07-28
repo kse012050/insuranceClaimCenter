@@ -3,7 +3,7 @@ $(document).ready(function(){
     clickEvent();
 
     // scroll event
-    $('.subPage02').attr('data-scroll') === 'fixed' && scrollEvent();
+    $('.subPage').attr('data-scroll') === 'fixed' && scrollEvent();
     
 })
 
