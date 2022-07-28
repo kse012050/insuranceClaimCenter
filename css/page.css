@@ -33,11 +33,10 @@
 .mainPage nav .mainManu ul li:nth-child(4) :is(a , button){background-image: url('../images/ic-menu.png');}
 .mainPage nav .mainManu ul li.active a{opacity: 1;}
 /* .mainPage nav .sideMenu{display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);} */
-.mainPage nav .sideMenu > div{width: 290px; margin-left: auto; height: 100%; background-color: white;}
-.mainPage nav .sideMenu > div div{display: flex; justify-content: space-between; align-items: center; padding: 15px;}
-.mainPage nav .sideMenu > div div h2{font-size: 16px; font-weight: 500;}
-.mainPage nav .sideMenu > div div h2 a{display: flex; align-items: center;}
-.mainPage nav .sideMenu > div div h2 a::before{content: ''; width: 24px; height: 24px; background: url('../images/ic-home.png') no-repeat center / cover; margin-right: 10px;}
+.mainPage nav .sideMenu > div{width: 290px; margin-left: auto; height: 100%; background-color: white; position: relative;}
+.mainPage nav .sideMenu > div h2{font-size: 16px; font-weight: 500; padding: 15px;}
+.mainPage nav .sideMenu > div h2 a{display: flex; align-items: center;}
+.mainPage nav .sideMenu > div h2 a::before{content: ''; width: 24px; height: 24px; background: url('../images/ic-home.png') no-repeat center / cover; margin-right: 10px;}
 /* .mainPage nav .sideMenu > div div button{width: 24px; height: 24px; position: relative;  text-indent: -9999px;}
 .mainPage nav .sideMenu > div div button::before , .mainPage nav .sideMenu > div div button::after{content: ''; position: absolute; left: 50%; top: 50%; width: 75%; height: 2px; background-color: black;}
 .mainPage nav .sideMenu > div div button::before{transform:translate(-50% , -50%) rotate(45deg);}
@@ -47,6 +46,7 @@
 .mainPage nav .sideMenu > div > ul > li > a{padding: 30px 0; font-size: 16px; font-weight: 500;}
 .mainPage nav .sideMenu > div > ul > li ul{display: none;}
 .mainPage nav .sideMenu > div > ul > li ul li a{padding: 10px; font-size: 15px; font-weight: 300; color: #666;}
+.mainPage nav .sideMenu > div > button{position: absolute; right: 15px; top: 15px;}
 /* .mainPage nav .sideMenu > div > ul > li.active ul{padding-bottom: 20px;} */
 /* .mainPage nav .sideMenu.active{display: flex;} */
 
@@ -106,14 +106,10 @@
 .step01Area .agreeArea fieldset ul li label{justify-content: flex-end;}
 /* .step01Area .agreeArea fieldset ul li label::after{order: -1; margin-left: 10px;} */
 .step01Area .agreeArea fieldset ul li label span{margin-right: auto; line-height: 1;}
-.popupArea{display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: white;}
-.popupArea div{padding-top: 70px; display: flex; flex-direction: column;}
-.popupArea div strong{display: block; font-size: 20px; padding: 0 20px; margin-bottom: 30px;}
-.step01Area .agreeArea .popupArea div strong{max-width: 145px;}
-.step01Area .agreeArea .popupArea div .olCase02{flex: 1; overflow: auto;}
-.step01Area .agreeArea .popupArea div .olCase02 li button{font-size: 16px; padding: 25px 20px; border-bottom: 1px solid #e6e6e6;}
-.step01Area .agreeArea .popupArea div .olCase02 li p{display: none; padding: 20px; color: #666666; background-color: #f9f9f9; border-width: 0 1px 1px; border-style: solid; border-color: #e6e6e6;}
-.popupArea .closeBtn{position: absolute; right: 20px; top: 20px;}
+.step01Area .agreeArea [data-popup='popup01'] div strong{max-width: 145px;}
+.step01Area .agreeArea [data-popup='popup01'] div .olCase02{flex: 1; overflow: auto;}
+.step01Area .agreeArea [data-popup='popup01'] div .olCase02 li button{font-size: 16px; padding: 25px 20px; border-bottom: 1px solid #e6e6e6;}
+.step01Area .agreeArea [data-popup='popup01'] div .olCase02 li p{display: none; padding: 20px; color: #666666; background-color: #f9f9f9; border-width: 0 1px 1px; border-style: solid; border-color: #e6e6e6;}
 .popupArea.active{display: block;}
 
 /* 보험금 청구 - STEP02 */

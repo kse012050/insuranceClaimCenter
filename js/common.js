@@ -17,10 +17,10 @@ function scrollEvent(){
 function clickEvent(){
     // menu
     let clickAttr;
-    let menuSelector = $('[data-menu]');
+    let menuSelector = $('[data-popup]');
     $('[data-click]').click(function(e){
         clickAttr = $(this).attr('data-click');
-        clickAttr === 'menu' && clickEvent();
+        ((clickAttr === 'menu') || clickAttr.includes('popup')) && popupClick(clickAttr);
         clickAttr === 'drop' && dropEvent(e ,$(this).attr('data-drop'));
     })
     
@@ -32,12 +32,13 @@ function clickEvent(){
     })
 
     $('[data-close]').click(function(){
-        closeSelector = $('[data-'+$(this).attr('data-close')+'="area"]');
+        closeSelector = $('[data-popup="'+$(this).attr('data-close')+'"]');
         closeSelector.removeClass('active');
     });
 
-    function clickEvent(){
-        menuSelector.addClass('active');
+
+    function popupClick(clickAttr){
+        $('[data-popup="'+clickAttr+'"]').addClass('active');
     }
 
 
@@ -45,10 +46,12 @@ function clickEvent(){
     function dropEvent(e , dropNum){
         let dropSelector = $('[data-click="drop"] > li > *');
         dropNum === 'one' && dropSelector.next().stop().slideUp();
-        dropNum === 'all' && ($(e.target).prop("tagName") === "BUTTON" && e.preventDefault());
         ($(e.target).prop("tagName") === "BUTTON" || $(e.target).prop("tagName") === "A") && $(e.target).next().stop().slideToggle();
         ($(e.target).prop("tagName") === "BUTTON") && $(e.target).toggleClass('active');
             
     }
     
+    $('form button').click((e)=>{
+        e.preventDefault();
+    })
 }
