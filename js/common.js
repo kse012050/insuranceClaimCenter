@@ -15,7 +15,7 @@ function clickEvent(){
     $('[data-click]').click(function(e){
         clickAttr = $(this).attr('data-click');
         clickAttr === 'backPage' && window.history.back();
-        ((clickAttr === 'menu') || clickAttr.includes('popup')) && popupClick(clickAttr);
+        ((clickAttr === 'camera') || (clickAttr === 'menu') || clickAttr.includes('popup')) && popupClick(clickAttr);
         clickAttr === 'drop' && dropEvent(e ,$(this).attr('data-drop'));
         clickAttr === 'phoneConfirm' && $('[data-'+clickAttr+']').addClass('active');
     })

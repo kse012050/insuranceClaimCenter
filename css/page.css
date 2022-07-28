@@ -215,8 +215,8 @@
 
 /* 고객센터 */
 .serviceCenter > div ul{}
-.serviceCenter > div ul li{padding: 30px 20px 25px; border-bottom: 1px solid #e6e6e6; position: relative;}
-.serviceCenter > div ul li a{font-weight: 300;}
+.serviceCenter > div ul li{ border-bottom: 1px solid #e6e6e6; position: relative;}
+.serviceCenter > div ul li a{display: block; font-weight: 300; padding: 30px 20px 25px;}
 .serviceCenter > div ul li a b{display: block; font-weight: 500; margin-bottom: 10px;}
 .serviceCenter > div ul li::after{content: ''; width: 55px; height: 55px; border: 1px solid black; border-radius: 100%; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background-repeat: no-repeat; background-position: center; background-size: 26px;}
 .serviceCenter > div ul li:nth-child(1)::after{background-image: url('../images/ic-cs.png');}
