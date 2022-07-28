@@ -91,10 +91,12 @@ input[type="checkBox"]:checked + label::after{background-image: url('../images/c
 
 
 /* 팝업 */
-[data-popup^='popup']{display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: white; z-index: 10;}
+[data-popup^='popup']{display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: white; z-index: 10; overflow: auto;}
 [data-popup^='popup'] div{height: 100%; padding-top: 70px; display: flex; flex-direction: column; position: relative; box-sizing: border-box;}
 [data-popup^='popup'] div strong{display: block; font-size: 20px; padding: 0 20px; margin-bottom: 30px;}
 [data-popup^='popup'] .closeBtn{position: absolute; right: 20px; top: 20px;}
+[data-popup^='popup'].active{display: block;}
+
 
 /* 서브페이지 */
 /* 서브 페이지 공통 */

@@ -110,7 +110,7 @@
 .step01Area .agreeArea [data-popup='popup01'] div .olCase02{flex: 1; overflow: auto;}
 .step01Area .agreeArea [data-popup='popup01'] div .olCase02 li button{font-size: 16px; padding: 25px 20px; border-bottom: 1px solid #e6e6e6;}
 .step01Area .agreeArea [data-popup='popup01'] div .olCase02 li p{display: none; padding: 20px; color: #666666; background-color: #f9f9f9; border-width: 0 1px 1px; border-style: solid; border-color: #e6e6e6;}
-.popupArea.active{display: block;}
+/* .popupArea.active{display: block;} */
 
 /* 보험금 청구 - STEP02 */
 .step02Area .olCase02 li:not(:last-child){margin-bottom: 30px;}
@@ -159,6 +159,16 @@
 .step03Area .menuArea > div > ul > li:nth-child(1) > button{background-image: url('../images/ic-camera.png');}
 .step03Area .menuArea > div > ul > li:nth-child(2) > button{background-image: url('../images/ic-gallery.png');}
 .step03Area .menuArea > div > ul > li:nth-child(3) > button{background-image: url('../images/ic-file.png');}
+
+.step03Area .galleryArea ul{display: flex; flex-wrap: wrap; gap: 1px;}
+.step03Area .galleryArea ul li{ position: relative; width: calc((100% - 2px) / 3);}
+.step03Area .galleryArea ul li label{width: 100%; padding-bottom: 100%; text-indent: -9999px; background-color: #e3e3e3;}
+.step03Area .galleryArea ul li label::after{position: absolute; right: 10px; top: 10px;}
+
+.step03Area .fileArea ul li{border-bottom: 1px solid #e6e6e6;}
+.step03Area .fileArea ul li input[type="file"]{display: none;}
+.step03Area .fileArea ul li label{padding: 25px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 17px; font-weight: 500;}
+.step03Area .fileArea ul li label::after{content: ''; width: 24px; height: 24px; background: url('../images/ic-file.png') no-repeat center / cover;}
 
 
 /* 보험금 청구 - STEP04 */

@@ -24,12 +24,13 @@ function clickEvent(){
         clickAttr === 'drop' && dropEvent(e ,$(this).attr('data-drop'));
     })
     
-    menuSelector.click(()=>{
-        menuSelector.removeClass('active');
+    menuSelector.click(function(){
+        $(this).removeClass('active');
     })
     menuSelector.children().click((e)=>{
         e.stopPropagation();
     })
+
 
     $('[data-close]').click(function(){
         closeSelector = $('[data-popup="'+$(this).attr('data-close')+'"]');
