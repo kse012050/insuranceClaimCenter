@@ -5,7 +5,7 @@ $(document).ready(function(){
     $('.subPage').attr('data-scroll') === 'fixed' && scrollEvent();
     
     // 지원서비스 센터
-    supportMnue()
+    $('*').hasClass('supportArea') && supportMnue();
 })
 
 function clickEvent(){
@@ -14,6 +14,7 @@ function clickEvent(){
     let menuSelector = $('[data-popup]');
     $('[data-click]').click(function(e){
         clickAttr = $(this).attr('data-click');
+        clickAttr === 'backPage' && window.history.back();
         ((clickAttr === 'menu') || clickAttr.includes('popup')) && popupClick(clickAttr);
         clickAttr === 'drop' && dropEvent(e ,$(this).attr('data-drop'));
         clickAttr === 'phoneConfirm' && $('[data-'+clickAttr+']').addClass('active');
