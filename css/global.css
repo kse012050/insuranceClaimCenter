@@ -1,7 +1,7 @@
 
 /* 컨텐츠 크기 */
 [class*='Width'] ,.subPage header > div{margin: 0 auto;}
-.maxWidth{max-width: 640px;}
+.maxWidth{max-width: 640px; width: 100%;}
 .contentWidth{max-width: calc(100% - 40px); width: calc(640px - 40px);}
 
  
@@ -89,25 +89,20 @@ input[type="checkBox"]:checked + label::after{background-image: url('../images/c
 .ulCase02 > li > mark::before{background-image: url('../images/ic-check-color.png');}
 
 
+/* 팝업공통 */
+[data-popup]{display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%;}
+[data-popup].active{display: flex;}
+
 /* 클릭 메뉴 */
-[data-popup="menu"]{display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 5;}
+[data-popup="menu"]{background-color: rgba(0, 0, 0, 0.5); z-index: 5;}
 [data-popup="menu"] > div{background-color: white;}
-[data-popup="menu"].active{display: flex;}
 
 
 /* 팝업 */
-[data-popup^='popup']{display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: white; z-index: 10; overflow: auto; z-index: 5;}
-[data-popup^='popup'] div{height: 100%; padding-top: 70px; display: flex; flex-direction: column; position: relative; box-sizing: border-box;}
-[data-popup^='popup'] div strong{display: block; font-size: 20px; padding: 0 20px; margin-bottom: 30px;}
+[data-popup^='popup']{background-color: white; z-index: 10; overflow: auto; z-index: 5;}
+[data-popup^='popup'] > div{height: 100%; padding-top: 70px; display: flex; flex-direction: column; position: relative; box-sizing: border-box;}
+[data-popup^='popup'] > div strong{display: block; font-size: 20px; padding: 0 20px; margin-bottom: 30px;}
 [data-popup^='popup'] .closeBtn{position: absolute; right: 20px; top: 20px;}
-[data-popup^='popup'].active{display: block;}
-
-/* 팝업 - 카메라 */
-[data-popup='camera']{display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: black;}
-[data-popup='camera'] div{height: 100%; position: relative; display: flex; justify-content: center; align-items: center; font-size: 14px; font-weight: 700; color: white;}
-[data-popup='camera'] div button{position: absolute; right: 10px; top: 10px;}
-[data-popup='camera'] div button::before , [data-popup='camera'] div button::after{background-color: white;}
-[data-popup='camera'].active{display: block;}
 
 
 /* 서브페이지 */
@@ -214,14 +209,13 @@ input[type="checkBox"]:checked + label::after{background-image: url('../images/c
 
 
 /* 푸터 */
-footer{padding: 40px 0 95px; font-size: 13px; background-color: #f3f3f3;}
-footer div{ text-align: center; }
-footer div ul{display: flex; justify-content: center; margin-bottom: 20px;}
-footer div ul li:not(:last-child){border-right: 1px solid black;}
-footer div ul li a{display: block; padding: 0 10px;  font-weight: 300;}
-footer div ul li a b{font-weight: 500;}
-footer div p:nth-of-type(1){max-width: 220px; margin: 0 auto 10px; line-height: normal;}
-footer div p:nth-of-type(1) b{font-weight: 700;}
-footer div > a{font-size: 18px; font-weight: 500; margin-bottom: 20px;}
-footer div p:nth-of-type(2){font-size: 12px; font-weight: 300; color: #666;}
+footer{padding: 40px 0 95px; font-size: 13px; background-color: #f3f3f3; text-align: center;}
+footer ul{display: flex; justify-content: center; margin-bottom: 20px;}
+footer ul li:not(:last-child){border-right: 1px solid black;}
+footer ul li a{display: block; padding: 0 10px;  font-weight: 300;}
+footer ul li a b{font-weight: 500;}
+footer p:nth-of-type(1){max-width: 220px; margin: 0 auto 10px; line-height: normal;}
+footer p:nth-of-type(1) b{font-weight: 700;}
+footer > a{font-size: 18px; font-weight: 500; margin-bottom: 20px;}
+footer p:nth-of-type(2){font-size: 12px; font-weight: 300; color: #666;}
 

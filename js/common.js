@@ -6,6 +6,11 @@ $(document).ready(function(){
     
     // 지원서비스 센터
     $('*').hasClass('supportArea') && supportMnue();
+    
+    
+    // 나중에 삭제 미리보기 먼저 보여주기 위해
+    $('*').hasClass('step03Area') && $('body').css('overflow','hidden');
+
 })
 
 function clickEvent(){
@@ -15,13 +20,14 @@ function clickEvent(){
     $('[data-click]').click(function(e){
         clickAttr = $(this).attr('data-click');
         clickAttr === 'backPage' && window.history.back();
-        ((clickAttr === 'camera') || (clickAttr === 'menu') || clickAttr.includes('popup')) && popupClick(clickAttr);
+        ((clickAttr === 'menu') || clickAttr.includes('popup')) && popupClick(clickAttr);
         clickAttr === 'drop' && dropEvent(e ,$(this).attr('data-drop'));
         clickAttr === 'phoneConfirm' && $('[data-'+clickAttr+']').addClass('active');
     })
     
     menuSelector.click(function(){
         $(this).removeClass('active');
+        preventScroll();
     })
     menuSelector.children().click((e)=>{
         e.stopPropagation();
@@ -31,11 +37,18 @@ function clickEvent(){
     $('[data-close]').click(function(){
         closeSelector = $('[data-popup="'+$(this).attr('data-close')+'"]');
         closeSelector.removeClass('active');
+        preventScroll();
     });
 
 
     function popupClick(clickAttr){
+        $('body').css('overflow','hidden');
         $('[data-popup="'+clickAttr+'"]').addClass('active');
+    }
+
+    function preventScroll(){
+        console.log($('[data-popup]').hasClass('active'));
+        $('[data-popup]').hasClass('active') || $('body').removeAttr('style');
     }
 
 

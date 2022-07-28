@@ -7,8 +7,10 @@
     <!-- Iphone 모바일 확대 방지 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=0">
     <title>STEP03 보험금 청구 - 보험 중계 청구센터</title>
-    <link rel="stylesheet" href="css/import.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/import.css">
     <script src="js/common.js"></script>
 </head>
 <body>
@@ -116,11 +118,11 @@
                 <b>증빙서류 첨부하기</b>
                 <ul>
                     <li>
-                        <button data-click="camera">카메라</button>
-                        <div data-popup="camera">
+                        <button data-click="popup03">카메라</button>
+                        <div class="cameraArea" data-popup="popup03">
                             <div class="maxWidth">
                                 촬영이미지 영역
-                                <button class="closeBtn" data-close="camera">활영이미지 영역 닫기</button>
+                                <button class="closeBtn" data-close="popup03">활영이미지 영역 닫기</button>
                             </div>
                         </div>
                     </li>
@@ -221,6 +223,31 @@
                 </ul>
             </div>
         </div>
+        <div class="previewArea active" data-popup="popup04">
+            <div class="maxWidth">
+                <strong>미리보기</strong>
+                <div class="sliderArea">
+                    <div class="swiper previewSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="http://via.placeholder.com/300" alt="test img"></div>
+                            <div class="swiper-slide"><img src="http://via.placeholder.com/100" alt="test img"></div>
+                            <div class="swiper-slide"><img src="http://via.placeholder.com/200" alt="test img"></div>
+                            <div class="swiper-slide"><img src="http://via.placeholder.com/400" alt="test img"></div>
+                            <div class="swiper-slide"><img src="http://via.placeholder.com/500" alt="test img"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <button class="closeBtn" data-close="popup04">popup close button</button>
+                <div class="bottomLink">
+                    <div class="contentWidth">
+                        <button>재첨부</button>
+                        <button>첨부완료</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="bottomLink">
             <div class="contentWidth">
                 <a href="step02.html">이전</a>
@@ -228,5 +255,15 @@
             </div>
         </div>
     </div>
+    <script>
+        var swiper = new Swiper(".previewSwiper", {
+            spaceBetween: 40,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoHeight: true,
+        });
+    </script>
 </body>
 </html>

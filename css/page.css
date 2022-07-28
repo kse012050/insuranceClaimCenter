@@ -188,6 +188,21 @@
 .step03Area .fileArea ul li label{padding: 25px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 17px; font-weight: 500;}
 .step03Area .fileArea ul li label::after{content: ''; width: 24px; height: 24px; background: url('../images/ic-file.png') no-repeat center / cover;}
 
+/* 보험금 청구 - STEP03  - popup 카메라*/
+.cameraArea{background-color: black;}
+.cameraArea div{height: 100%; position: relative; display: flex; justify-content: center; align-items: center; font-size: 14px; font-weight: 700; color: white;}
+.cameraArea div button{position: absolute; right: 10px; top: 10px;}
+.cameraArea div button::before , 
+.cameraArea div button::after{background-color: white;}
+
+.previewArea > div{padding-bottom: 55px;}
+.previewArea div div.sliderArea{flex: 1; background-color: #f5f5f5; padding: 40px 0; overflow: auto; display: flex; align-items: center;}
+.previewArea div div.sliderArea .previewSwiper{padding: 0 40px;}
+.previewArea div div.sliderArea .previewSwiper .swiper-slide{display: flex; justify-content: center; align-items: center; height: 100%;}
+.previewArea div div.sliderArea .previewSwiper .swiper-slide img{max-width: 100%;}
+.previewSwiper .swiper-button-next:after, 
+.previewSwiper .swiper-button-prev:after{font-size: 20px; color: black;}
+
 
 /* 보험금 청구 - STEP04 */
 .step04Area > div strong{display: block; margin-bottom: 10px;}
