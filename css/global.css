@@ -27,7 +27,7 @@ strong{font-weight: 700;}
 
 
 /* 아이콘  */
-[data-icon]{text-indent: -9999px; min-width: 24px; height: 24px; background-repeat: no-repeat; background-position: center;}
+[data-icon]{text-indent: -9999px; min-width: 24px; height: 24px; background-repeat: no-repeat; background-position: center; background-size: 24px;}
 [data-icon="file"]{background-image: url('../images/ic-file.png');}
 [data-icon="delete"]{background-image: url('../images/ic-delete.png');}
 
@@ -53,7 +53,7 @@ button.moreBtn::after{width: 20px; height: 20px; background-image: url('../image
 /* 입력 박스 공통 */
 textarea{resize: none;}
 input:not([type="checkbox"]) , select{ height: 50px;}
-input:not([type="checkbox"]) , select , textarea{width: 100%; padding: 15px; border: 1px solid #e6e6e6; box-sizing: border-box;}
+input:not([type="checkbox"]) , select , textarea{background-color: white; width: 100%; padding: 15px; border: 1px solid #e6e6e6; box-sizing: border-box;}
 /* 체크박스 */
 input[type="checkBox"]{display: none;}
 input[type="checkBox"] + label{line-height: 1; display: flex; align-items: center;}
@@ -151,7 +151,7 @@ input[type="checkBox"]:checked + label::after{background-image: url('../images/c
 /* 서브페이지 상단 공통 */
 .subPage header{}
 .subPage header > div{padding: 0 10px; display: flex; }
-.subPage header > div > a{width: 24px; height: 24px; height: 55px; text-indent: -9999px; background-repeat: no-repeat ; background-position: center; margin-right: 10px;}
+.subPage header > div > a{width: 24px; height: 55px; text-indent: -9999px; background-repeat: no-repeat ; background-position: center; background-size: 24px; margin-right: 10px;}
 .subPage header > div h2{min-height: 55px; display: flex; align-items: center; font-size: 20px; font-weight: 700; padding-bottom: 55px; transform: translate3d(-34px , 50px ,0); transition-duration: 0.5s , 0.5s , 0s; transition-property:padding-bottom , transform , color ; }
 .subPage header + p span{display: block;}
 .subPage header > nav{width: 100%; overflow: auto; padding-bottom: 10px;}
@@ -162,7 +162,7 @@ input[type="checkBox"]:checked + label::after{background-image: url('../images/c
 .subPage header > nav ul li:not(:last-child){margin-right: 20px;}
 
 /* 서브페이지 상단 배경X 스크롤X */
-.subPage header:not(.BGColor) > div > a{background-image: url('../images/ic-back.png');}
+.subPage header:not(.BGColor) > div > a{background-image: url('../images/ic-back.png'); }
 .subPage header:not(.BGColor) + p{margin-top: -15px;}
 
 /* 서브페이지 상단 배경O 스크롤X */
