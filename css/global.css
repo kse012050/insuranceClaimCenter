@@ -5,6 +5,7 @@
 .contentWidth{max-width: calc(100% - 40px); width: calc(640px - 40px);}
 
  
+/* 페이지 하단 간격 */
 .claimArea , .termsArea{padding-bottom: 50px;}
 .documentArea ,.serviceCenter{padding-bottom: 55px;}
 .claimFin, .FAQArea , .supportArea{padding-bottom: 100px;}
@@ -19,6 +20,7 @@ mark{color: #0bbef3;}
 mark.under{text-decoration: underline;}
 
 
+/* strong 태그 글자 굵기 */
 strong{font-weight: 700;}
 
 
@@ -113,43 +115,9 @@ input[type="checkBox"]:checked + label::after{background-image: url('../images/c
 /* .subPage header ~ *:not(:last-child){margin-bottom: 50px;} */
 .subPage header ~ div > *:not(:last-child){margin-bottom: 50px;}
 
-/* 서브 타이틀 */
-/* .subPage header > div{max-width: calc(100% - 20px); width: calc(640px - 20px); margin: 0 auto;}
-.subPage header > div .subTitle{ display: flex; flex-wrap: wrap; padding: 15px 0;}
-.subPage header > div .subTitle > a{width: 24px; height: 24px; text-indent: -9999px; background-repeat: no-repeat ; background-position: center; background-size: cover; margin-bottom: 30px;}
-.subPage header > div .subTitle h2{width: 100%; font-size: 20px; font-weight: 700; padding: 0 10px;}
-.subPage header > div .subTitle p{padding: 0 10px;}
-.subPage header.bgColor > div .subTitle p{margin-top: 40px;}
-.subPage header:not(.bgColor) > div .subTitle p{ margin-top: 10px;}
-.subPage header > div nav{width: 100%; overflow: auto; padding-bottom: 10px;}
-.subPage header > div nav ul{display: inline-flex; margin: 0 20px;}
-.subPage header > div nav ul li.active{position: relative;}
-.subPage header > div nav ul li.active::after{content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 2px;}
-.subPage header:not(.bgColor) > div nav ul li.active::after{background-color: black;}
-.subPage header > div nav ul li a{white-space: nowrap; padding: 15px 0;}
-.subPage header > div nav ul li:not(:last-child){margin-right: 20px;} */
-
-/* 서브 타이틀 - 링크 이미지*/
-/* .subPage header:not([class*=""]) > div .subTitle > a{background-image: url('../images/ic-back.png');}
-
-.subPage header.bgColor{background-color: #2e3239; color: white;}
-.subPage header.bgColor > div .subTitle a{background-image: url('../images/ic-back-white.png');}
-.subPage header.bgColor > div nav ul li.active::after{background-color: white;}
-
-.subPage header.active{position: fixed; left: 0; top: 0; width: 100%;  background-color: #2e3239;}
-.subPage header.active > div .subTitle > a{margin: 0; background-image: url('../images/ic-back-white.png');}
-.subPage header.active > div .subTitle h2{width: 50%; color: white;}
-.subPage header.active + ol{padding-top: 56.69px;}
-.subPage header.active + div{padding-top: 117.95px;} */
-
-/* 서브 타이틀과 컨텐츠 사이 간격 */
-/* .subPage header.bgColor + *{margin-top: 50px;}
-.subPage header:not(.bgColor) + *{margin-top: 30px;} */
-
 
 /* 서브페이지 상단 */
 /* 서브페이지 상단 공통 */
-.subPage header{}
 .subPage header > div{padding: 0 10px; display: flex; }
 .subPage header > div > a{width: 24px; height: 55px; text-indent: -9999px; background-repeat: no-repeat ; background-position: center; background-size: 24px; margin-right: 10px;}
 .subPage header > div h2{min-height: 55px; display: flex; align-items: center; font-size: 20px; font-weight: 700; padding-bottom: 55px; transform: translate3d(-34px , 50px ,0); transition-duration: 0.5s , 0.5s , 0s; transition-property:padding-bottom , transform , color ; }

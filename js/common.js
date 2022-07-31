@@ -76,35 +76,19 @@ function scrollEvent(){
 
 function supportMnue(){
     let attrName;
-    let test = true;
     $('.supportArea nav ul li a').click(function(e){
         e.preventDefault();
         attrName = $(this).attr('href');
-        // console.log($('#limit').offset().top);
-        // console.log(attrName);
-        // console.log($(''+attrName));
         $('html').animate({'scrollTop' : $(attrName).offset().top - 150})
-        // console.log($('.supportArea nav').scrollLeft());
-        // console.log($('.supportArea nav').width());
-        // console.log($('.supportArea nav ul').width() + parseInt($('.supportArea nav ul').css('margin-left')) * 2);
-        // console.log('--------------------------------');
     })
 
     $(window).scroll(function(){
-        test = true;
         $('.supportArea section').each(function(){
-            if($(this).offset().top - 150> $(window).scrollTop() && test){
+            if($(this).offset().top - 200 < $(window).scrollTop()){
                 attrName = $(this).attr('id');
                 $('.supportArea nav ul li').removeClass('active');
                 $('[href="#'+attrName+'"]').parent().addClass('active')
-                test = false;
             }
         });
-        // console.log(
-        //     $(window).scrollTop() / ($(document).height() - $(window).height())
-        // );
-        
-        // let test01 = (($('.supportArea nav ul').width() + parseInt($('.supportArea nav ul').css('margin-left')) * 2) - $('.supportArea nav').width()) * ($(window).scrollTop() / ($(document).height() - $(window).height()))
-        // $('.supportArea nav').scrollLeft(test01)
     })
 }
